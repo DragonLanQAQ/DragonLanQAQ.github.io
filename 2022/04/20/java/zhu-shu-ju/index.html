@@ -611,14 +611,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    1.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    6 分
                 </div>
                 
 
@@ -660,13 +660,49 @@
 <li>数据集成、共享、协同程度高难度小，降低运营成本。</li>
 <li>企业从各系统、子公司、分公司和部门获取到的数据准确，可用性高，提高了分析结果精确度。</li>
 </ol>
-<p>主数据具有：特征唯一性、识别唯一性、长期有效性、业务稳定性；</p>
-<ul>
+<h4 id="主数据具有：特征唯一性、识别唯一性、长期有效性、业务稳定性"><a href="#主数据具有：特征唯一性、识别唯一性、长期有效性、业务稳定性" class="headerlink" title="主数据具有：特征唯一性、识别唯一性、长期有效性、业务稳定性"></a>主数据具有：特征唯一性、识别唯一性、长期有效性、业务稳定性</h4><ul>
 <li>特征唯一性：在不同的应用和系统中有高度的一致性；</li>
 <li>识别唯一性：在一个企业中，不分系统、部门都可以唯一识别出来；</li>
 <li>长期有效性：长时间都是有效的数据，该业务对象贯穿于整个生命周期甚至更长；</li>
 <li>业务稳定性：一旦录入系统中就很少fg改动，就像是人员的姓名、身份证号一样。</li>
 </ul>
+<h2 id="Master-Data-生命周期管理"><a href="#Master-Data-生命周期管理" class="headerlink" title="Master Data 生命周期管理"></a>Master Data 生命周期管理</h2><p>为了保证MasterData 它的生命周期内被有效管理和利用。MDM系统必须能提供以下类型的功能：</p>
+<ol>
+<li><p>从新建直到数据停用，MasterData均能在MDM系统得到管理。</p>
+</li>
+<li><p>能分组和定义MasterData 实体间的层次关系。</p>
+</li>
+<li><p>灵活管理不同MasterData domain间的复杂的关系。比如 产品VS供应商，客户VS账户和地理位置。</p>
+</li>
+<li><p>能定义MasterData间的层次、关系和分组。手工方式或者自动方式(从外部系统获得诸如公司和机构、人员和机构等之间的关系)</p>
+</li>
+<li><p> 有版本管理能力，能明白MasterData 实体的状态是如何随时间变化的，</p>
+</li>
+<li><p>有编写能力，能定义，管理，定制和扩展不同的类型的MasterData。</p>
+</li>
+<li><p>能够迅速增加新的MasterData。比如增加多渠道属性(multichannelattribute)，隐私偏好(Privacypreference)，还有存在但是尚未在企业应用中捕获的各种事件。多渠道属性可标记客户与企业最近一次交互的日期和时间，客户可能是通过客服代表，电话 或者Internet与企业接触的。隐私偏好标记客户的个人信息能不能在多个业务线间共享。</p>
+</li>
+<li><p> 支持多种层次结构。比如产品的分类：可以从购买者的角度分，也可以从销售的角度分。</p>
+</li>
+<li><p>能维护数据的来源，标记出与MDM系统中的Master Data实体相关联的MasterData的存储位置。MDM系统可能不存储所有的与Master Data实体相关的信息，仅包含了一些需要集中维护的属性。</p>
+</li>
+<li><p>必要的MDM安全和隐私机制。</p>
+</li>
+<li><p>必要的审计(Audit)功能，帮助管理员了解修改Master Data 的相关信息：“who,” “what,” “how,” and “when”。</p>
+</li>
+</ol>
+<h2 id="数据质量管理"><a href="#数据质量管理" class="headerlink" title="数据质量管理"></a>数据质量管理</h2><ol>
+<li><p>需要有作数据分析和概要 (analysis and profiling)的能力。这有利于了解源系统中MasterData的质量和结构，确认必要的清理和合并规则。数据概要(DataProfiling)能力提供了建立数据质量基线(baseline)的方法，用以评估Master data的质量的改进程度。</p>
+</li>
+<li><p>能基于一致的数据标准化、校验和清理逻辑 改进Master Data的数据质量。这要求定义和实施一致的数据清理和校验规则，为数据域指定标准化逻辑，比如姓名和地址。</p>
+</li>
+<li><p>数据调谐(Datareconciliation)：能自动调谐MasterData实体，比如：客户和产品。 要组合deterministic和probabilistic的匹配功能，定义在合并多个Master Data记录时的存留规则(survivorship rule)。</p>
+</li>
+<li><p> 数据治理能力：在发生数据冲突时，管理MasterData间的调谐，实施更新关键MasterData的数据质量策略。</p>
+</li>
+<li><p>能测量数据的失效程度(staleness)，定期更新和重新评估Master Data的数据质量。</p>
+</li>
+</ol>
 
                 
             </div>
@@ -1246,18 +1282,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/04/20/java/zhu-shu-ju/">
+                <a href="/2022/04/20/java/shu-ju-yi-zhi-xing/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/sql.jpg" class="responsive-img" alt="主数据相关概念">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="数据一致性">
                         
-                        <span class="card-title">主数据相关概念</span>
+                        <span class="card-title">数据一致性</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1267,27 +1302,26 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-20
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-20
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Master-Data/" class="post-category">
-                                    Master Data
+                            <a href="/categories/Data/" class="post-category">
+                                    Data
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Master-Data/">
-                        <span class="chip bg-color">Master Data</span>
+                    <a href="/tags/Data/">
+                        <span class="chip bg-color">Data</span>
                     </a>
                     
                 </div>
@@ -1562,7 +1596,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">19.7k</span>&nbsp;字
+                class="white-color">21.7k</span>&nbsp;字
             
             
             

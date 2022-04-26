@@ -4,11 +4,90 @@
   
     
     <entry>
+      <title>RabbitMQ</title>
+      <link href="/2022/04/23/rabbitmq/"/>
+      <url>/2022/04/23/rabbitmq/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="RabbitMQ"><a href="#RabbitMQ" class="headerlink" title="RabbitMQ"></a>RabbitMQ</h1><p>RabbitMQ安装配置</p><h4 id="第一步：下载并安装erlang"><a href="#第一步：下载并安装erlang" class="headerlink" title="第一步：下载并安装erlang"></a>第一步：下载并安装erlang</h4><ul><li>原因：RabbitMQ服务端代码是使用并发式语言Erlang编写的，安装Rabbit MQ的前提是安装Erlang。</li><li>下载地址：<a href="http://www.erlang.org/downloads" target="_blank" rel="noopener">http://www.erlang.org/downloads</a></li></ul><h4 id="安装完事儿后要记得配置一下系统的环境变量。"><a href="#安装完事儿后要记得配置一下系统的环境变量。" class="headerlink" title="安装完事儿后要记得配置一下系统的环境变量。"></a>安装完事儿后要记得配置一下系统的环境变量。</h4><p>此电脑–&gt;鼠标右键“属性”–&gt;高级系统设置–&gt;环境变量–&gt;“新建”系统环境变量</p><p><img src="C:\Users\Dragon_Lan\blog\themes\matery\source\imgs\RabbitMQ\RabbitMQ-1.png" alt="RabbitMQ-1"></p><p>变量名：ERLANG_HOME</p><p>变量值就是刚才erlang的安装地址，点击确定。</p><p>然后双击系统变量path</p><p><img src="C:\Users\Dragon_Lan\blog\themes\matery\source\imgs\RabbitMQ\RabbitMQ-2.png" alt="RabbitMQ-2"></p><p>点击“新建”，将%ERLANG_HOME%\bin加入到path中。</p><p><img src="C:\Users\Dragon_Lan\blog\themes\matery\source\imgs\RabbitMQ\RabbitMQ-3.png" alt="RabbitMQ-3"></p><ul><li>最后windows键+R键，输入cmd，再输入erl，看到版本号就说明erlang安装成功了。</li></ul><p><img src="C:\Users\Dragon_Lan\blog\themes\matery\source\imgs\RabbitMQ\RabbitMQ-4.png" alt="RabbitMQ-4"></p><h4 id="第二步：下载并安装RabbitMQ"><a href="#第二步：下载并安装RabbitMQ" class="headerlink" title="第二步：下载并安装RabbitMQ"></a>第二步：下载并安装RabbitMQ</h4><ul><li><p>下载地址：<a href="http://www.rabbitmq.com/download.html" target="_blank" rel="noopener">http://www.rabbitmq.com/download.html</a></p></li><li><p>双击下载后的.exe文件，安装过程与erlang的安装过程相同。</p></li><li><p>RabbitMQ安装好后接下来安装RabbitMQ-Plugins。打开命令行cd，输入RabbitMQ的sbin目录。</p></li></ul><p>我的目录是：D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.3\sbin</p><p>然后在后面输入rabbitmq-plugins enable rabbitmq_management命令进行安装</p><p><img src="C:\Users\Dragon_Lan\blog\themes\matery\source\imgs\RabbitMQ\RabbitMQ-5.png" alt="RabbitMQ-5"></p><p>打开命令行命令行,进入RabbitMQ的安装目录: sbin</p><p>,输入 rabbitmqctl status , 如果出现以下的图，说明安装是成功的，并且说明现在RabbitMQ Server已经启动了,运行正常。</p><p><img src="C:\Users\Dragon_Lan\blog\themes\matery\source\imgs\RabbitMQ\RabbitMQ-6.png" alt="RabbitMQ-6"></p><p>打开sbin目录，双击rabbitmq-server.bat</p><p><img src="C:\Users\Dragon_Lan\blog\themes\matery\source\imgs\RabbitMQ\RabbitMQ-7.png" alt="RabbitMQ-7"></p><p>等几秒钟看到这个界面后，访问<a href="http://localhost:15672/" target="_blank" rel="noopener">http://localhost:15672</a></p><p><img src="C:\Users\Dragon_Lan\blog\themes\matery\source\imgs\RabbitMQ\RabbitMQ-8.png" alt="RabbitMQ-8"></p><p>然后可以看到如下界面</p><p><img src="C:\Users\Dragon_Lan\blog\themes\matery\source\imgs\RabbitMQ\RabbitMQ-9.png" alt="RabbitMQ-9"></p><p>默认用户名和密码都是guest</p><p>登陆即可。</p><p>安装步骤暂时就写这么多，本次安装是为了实现spring cloud的消息总线。后续用到了里面的具体内容和知识会再进行记录的。</p><h1 id="RabbitMQ使用与概念"><a href="#RabbitMQ使用与概念" class="headerlink" title="RabbitMQ使用与概念"></a>RabbitMQ使用与概念</h1><p>RabbitMQ作为一个消息中间件，其中设计思路基本都来源于AMQP协议，主要有如下几个重要的概念：</p><ul><li>Server：接收客户端的连接，实现AMQP实体服务。</li><li>Connection：连接，应用程序与Server的网络连接，TCP连接。</li><li>Channel：信道，消息读写等操作在信道中进行。客户端可以建立多个信道，每个信道代表一个会话任务。</li><li>Message：消息，应用程序和服务器之间传送的数据，消息可以非常简单，也可以很复杂。有Properties和Body组成。Properties为外包装，可以对消息进行修饰，比如消息的优先级、延迟等高级特性；Body就是消息体内容。</li><li>Virtual Host：虚拟主机，用于逻辑隔离。一个虚拟主机里面可以有若干个Exchange和Queue，同一个虚拟主机里面不能有相同名称的Exchange或Queue。</li><li>Exchange：交换器，接收消息，按照路由规则将消息路由到一个或者多个队列。如果路由不到，或者返回给生产者，或者直接丢弃。RabbitMQ常用的交换器常用类型有direct、topic、fanout、headers四种，后面详细介绍。</li><li>Binding：绑定，交换器和消息队列之间的虚拟连接，绑定中可以包含一个或者多个RoutingKey。</li><li>RoutingKey：路由键，生产者将消息发送给交换器的时候，会发送一个RoutingKey，用来指定路由规则，这样交换器就知道把消息发送到哪个队列。路由键通常为一个“.”分割的字符串，例如“com.rabbitmq”。</li><li>Queue：消息队列，用来保存消息，供消费者消费。</li></ul><p>主要分为三部分：</p><ul><li>生产者</li><li>消费者</li><li>服务端</li></ul><p>整个消息的发布与消费的流程大致如下：</p><ol><li>生产者client端指定服务端地址以及vhost虚拟主机，连接服务端</li><li>建立连接后，创建Channel信道，设置此信道的属性。</li><li>通过信道，声明交换机，队列，绑定关系，以及相关属性</li><li>通过信道，发送Message消息到Exchange交换机</li><li>交换机通过binding绑定关系与RoutingKey路由键，将消息分发到对应的Queue队列</li><li>消费者client通过服务端地址以及vhost连接服务端</li><li>建立连接后，创建信道，设置信道属性</li><li>通过信道，开启消费者监听队列，从队列中获取消息进行消费</li><li>根据是否延迟确认，确认消息已经被正常消费成功后，消息从队列中删除</li></ol><h3 id="Exchange交换机类型"><a href="#Exchange交换机类型" class="headerlink" title="Exchange交换机类型"></a>Exchange交换机类型</h3><p>注意：exchange负责消息路由，而不是存储，路由失败则消息丢失</p><h5 id="交换机的类型：Direct-exchange（直连交换机）、Fanout-exchange（扇型交换机）、Topic-exchange（主题交换机）、Headers-exchange（头交换机）、默认存在的交换机、Dead-Letter-Exchange（死信交换机）"><a href="#交换机的类型：Direct-exchange（直连交换机）、Fanout-exchange（扇型交换机）、Topic-exchange（主题交换机）、Headers-exchange（头交换机）、默认存在的交换机、Dead-Letter-Exchange（死信交换机）" class="headerlink" title="交换机的类型：Direct exchange（直连交换机）、Fanout exchange（扇型交换机）、Topic exchange（主题交换机）、Headers exchange（头交换机）、默认存在的交换机、Dead Letter Exchange（死信交换机）"></a>交换机的类型：Direct exchange（直连交换机）、Fanout exchange（扇型交换机）、Topic exchange（主题交换机）、Headers exchange（头交换机）、默认存在的交换机、Dead Letter Exchange（死信交换机）</h5><p>在上述结构中，生产者发送消息，并不是直接发送到队列的，而是发送到Exchange交换机，再由交换机分发到相应队列，没有匹配到队列则丢弃消息。根据Exchange的类型不同，可灵活实现常见的消息模式。</p><p>Exchange交换机共有四种类型：</p><ul><li>direct</li><li>fanout</li><li>topic</li><li>headers</li></ul><h4 id="direct"><a href="#direct" class="headerlink" title="direct"></a>direct</h4><p>Direct，完全匹配型交换机，此种类型交换机，通过RoutingKey路由键将交换机和队列进行绑定， 消息被发送到exchange时，需要根据消息的RoutingKey，来进行匹配，只将消息发送到完全匹配到此RoutingKey的队列。</p><p><img src="C:\Users\Dragon_Lan\blog\themes\matery\source\imgs\RabbitMQ\RabbitMQ-10.png" alt="RabbitMQ-10"></p><p>如图，不同的key绑定不同的队列，实现不同消息分发至不同队列。</p><blockquote><p>PS: 注意同一个key，可以绑定多个queue队列。如图中，当匹配到key1时，则会将消息分发送至queue1和queue2，这样两个队列都会有相同的消息数据。</p></blockquote><h4 id="fanout"><a href="#fanout" class="headerlink" title="fanout"></a>fanout</h4><p>Fanout，扇出类型交换机，此种交换机，会将消息分发给所有绑定了此交换机的队列，此时RoutingKey参数无效。</p><p><img src="C:\Users\Dragon_Lan\blog\themes\matery\source\imgs\RabbitMQ\RabbitMQ-11.png" alt="RabbitMQ-11"></p><p>此种方式，最简单快速，性能最好，因为少了中间的匹配判断环节。</p><h4 id="topic"><a href="#topic" class="headerlink" title="topic"></a>topic</h4><p>Topic，主题类型交换机，此种交换机与Direct类似，也是需要通过routingkey路由键进行匹配分发，区别在于Topic可以进行模糊匹配，Direct是完全匹配。<br>Topic中，将routingkey通过”.”来分为多个部分，通过如下功能字符来进行匹配：</p><ul><li>“*”：代表一个部分</li><li>“#”：代表一个或多个部分</li></ul><p>举个例子，加入绑定关系如下图：</p><p><img src="C:\Users\Dragon_Lan\blog\themes\matery\source\imgs\RabbitMQ\RabbitMQ-12.png" alt="RabbitMQ-12"></p><p>然后发送一条信息，routingkey为”a.b.c.d”，那么根据”.”将这个路由键分为了4个部分，此条路由键，将会匹配：</p><ul><li>a.b.c. ：成功匹配，因为可以代表一个部分</li><li>a.b.# ：成功匹配，因为#可以代表一个或多个部分</li><li>a..c.. : 成功匹配，因为第一和第三部分分别为a和c，且为4个部分，刚好匹配</li><li>#.d ： 成功匹配，因为最后一个部分为d，前面所有部分被#代表了</li></ul><blockquote><p>PS：如果绑定的路由键为 “#” 时，则接受所有消息，因为路由键所有都匹配</p></blockquote><h4 id="headers"><a href="#headers" class="headerlink" title="headers"></a>headers</h4><p>Headers，headers信息类型交换机，此类型交换机不通过routingkey路由键来分发消息，而是通过消息内容中的headers属性来进行匹配。headers类型交换器性能差，在实际中并不常用。</p><p>虽然不常用，但也可以了解一下其，此种交换机不通过routingkey，但是通过headers进行绑定，也就是在声明binding绑定关系时，需要传入需要匹配的header的key/value键值对。</p><p><img src="C:\Users\Dragon_Lan\blog\themes\matery\source\imgs\RabbitMQ\RabbitMQ-13.png" alt="RabbitMQ-13"></p><p>如图，绑定关系中，需要指定”x-match”匹配类型:</p><ul><li>all：需要所有的key-value都匹配，才能匹配成功</li><li>any：只需要其中一个key-value匹配，就匹配成功</li></ul><blockquote><p>PS: 不常用，此种方式性能比较差，如果要使用此种方式，使用前可进行性能测试，确保符合业务场景的需求</p></blockquote><p>原文连接：<a href="https://www.cnblogs.com/xingxia/p/rabbitmq_types.html" target="_blank" rel="noopener">RabbitMQ的四种交换机类型 https://www.cnblogs.com/xingxia/p/rabbitmq_types.html</a></p><h2 id="交换机的属性"><a href="#交换机的属性" class="headerlink" title="交换机的属性"></a>交换机的属性</h2><p>除交换机类型外，在声明交换机时还可以附带许多其他的属性，其中最重要的几个分别是：</p><ul><li>Name：交换机名称</li><li>Durability：是否持久化。如果持久性，则RabbitMQ重启后，交换机还存在</li><li>Auto-delete：当所有与之绑定的消息队列都完成了对此交换机的使用后，删掉它</li><li>Arguments：扩展参数</li></ul><h1 id="RabbitListener注解消费消息"><a href="#RabbitListener注解消费消息" class="headerlink" title="@RabbitListener注解消费消息"></a>@RabbitListener注解消费消息</h1><h3 id="1-注解的字段"><a href="#1-注解的字段" class="headerlink" title="1 注解的字段"></a>1 注解的字段</h3><p><code>@RabbitListener</code>注解指定目标方法作为消费消息的方法，通过注解参数指定所监听的队列或者Binding。</p><h4 id="1-1-containerFactory"><a href="#1-1-containerFactory" class="headerlink" title="1.1 containerFactory"></a>1.1 containerFactory</h4><p>使用<code>@RabbitListener</code>的<code>containerFactory</code>可设置一个自己明确默认值的<code>RabbitListenerContainerFactory</code>对象。 <code>RabbitListenerContainerFactory</code>的bean名称用以创建负责服务于这个端点的消息监听器<a href="https://cloud.tencent.com/product/tke?from=10680" target="_blank" rel="noopener">容器</a>。 如果没有指定，使用默认的容器工厂。如果指定了，则返回其工厂bean名称。</p><h3 id="QueueBinding"><a href="#QueueBinding" class="headerlink" title="@QueueBinding"></a>@QueueBinding</h3><p>注意<code>@QueueBinding</code>注解的三个属性：</p><ul><li>value: @Queue 注解，用于声明队列，value 为 queueName, durable 表示队列是否持久化, autoDelete 表示没有消费者之后队列是否自动删除</li><li>exchange: @Exchange 注解，用于声明 exchange， type 指定消息投递策略，我们这里用的 topic 方式</li><li>key: 在 topic 方式下，这个就是我们熟知的 routingKey</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> RabbitMQ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> RabbitMQ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>命令行</title>
+      <link href="/2022/04/20/java/ming-ling-xing/"/>
+      <url>/2022/04/20/java/ming-ling-xing/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="命令行-CLI"><a href="#命令行-CLI" class="headerlink" title="命令行(CLI)"></a>命令行(CLI)</h1><h3 id="Dos命令"><a href="#Dos命令" class="headerlink" title="Dos命令"></a>Dos命令</h3><ul><li>cd</li><li>dir</li><li>md Java          创建一个名为Java的文件夹</li><li>mkdir</li><li></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 命令行 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>bit与byte</title>
+      <link href="/2022/04/20/java/bit-yu-byte/"/>
+      <url>/2022/04/20/java/bit-yu-byte/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="bit-比特-与byte-字节"><a href="#bit-比特-与byte-字节" class="headerlink" title="bit(比特)与byte(字节)"></a>bit(比特)与byte(字节)</h1><p>一个0或者一个1存储为一个比特(bt)，是计算机中最小的存储单位。</p><p>计算机中是最基本的存储单元是字节(byte)。每个字节由8个比特构成。</p><h5 id="计算机的存储能力是以字节和多字节来衡量的。如下："><a href="#计算机的存储能力是以字节和多字节来衡量的。如下：" class="headerlink" title="计算机的存储能力是以字节和多字节来衡量的。如下："></a>计算机的存储能力是以字节和多字节来衡量的。如下：</h5><blockquote><p>千字节（kilobyte,KB）=1024B</p><p>兆字节（megabyte,MB）=1024KB</p><p>千兆字节（gigabyte.，GB）=1024MB</p><p>万亿字节（terabyte,TB）=1024GB</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> bit </tag>
+            
+            <tag> byte </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>数据一致性</title>
       <link href="/2022/04/20/java/shu-ju-yi-zhi-xing/"/>
       <url>/2022/04/20/java/shu-ju-yi-zhi-xing/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="数据一致性"><a href="#数据一致性" class="headerlink" title="数据一致性"></a>数据一致性</h1><h2 id="什么是一致性"><a href="#什么是一致性" class="headerlink" title="什么是一致性"></a>什么是一致性</h2><p>在<a href="https://so.csdn.net/so/search?q=%E5%88%86%E5%B8%83%E5%BC%8F&spm=1001.2101.3001.7020" target="_blank" rel="noopener">分布式</a>系统中，一致性（Consistency）是指多副本（Replications）问题中的数据一致性。</p><h2 id="一致性的种类"><a href="#一致性的种类" class="headerlink" title="一致性的种类"></a>一致性的种类</h2><ul><li>事务一致性</li><li>数据一致性</li></ul><p>本文主要讨论数据一致性（事务一致性指ACID）</p><h2 id="导致一致性出现的原因"><a href="#导致一致性出现的原因" class="headerlink" title="导致一致性出现的原因"></a>导致一致性出现的原因</h2><ul><li>数据的分布式存储是导致出现一致性的唯一原因</li></ul><h2 id="强一致性-与-弱一致性"><a href="#强一致性-与-弱一致性" class="headerlink" title="强一致性 与 弱一致性"></a>强一致性 与 弱一致性</h2><p><strong>数据一致性的种类</strong></p><ul><li>强一致性（线性一致性）：即复制是同步的</li><li>弱一致性：即复制是异步的</li></ul><h3 id="强一致性两个要求"><a href="#强一致性两个要求" class="headerlink" title="强一致性两个要求"></a>强一致性两个要求</h3><ul><li>任何一次读都能读到某个数据的最近一次写的数据。</li><li>系统中的所有进程，看到的操作顺序，都和全局时钟下的顺序一致。</li></ul><p>简言之，在任意时刻，所有节点中的数据是一样的。</p><h3 id="弱一致性"><a href="#弱一致性" class="headerlink" title="弱一致性"></a>弱一致性</h3><p>数据更新后，如果能容忍后续的访问只能访问到部分或者全部访问不到，则是弱一致性。</p><p>最终一致性就属于弱一致性。</p><h3 id="强一致性和弱一致性举例"><a href="#强一致性和弱一致性举例" class="headerlink" title="强一致性和弱一致性举例"></a>强一致性和弱一致性举例</h3><p>例如，对于关系型数据库，要求更新过的数据能被后续的访问都能看到，这是强一致性<br>用户更新网站头像，在某个时间点，用户向主库发送更新请求，不久之后主库就收到了请求。在某个时刻，主库又会将数据变更转发给自己的从库。最后，主库通知用户更新成功。</p><p>如果在返回“更新成功”并使新头像对其他用户可见之前，主库需要等待从库的确认，确保从库已经收到写入操作，那么复制是同步的，即强一致性。如果主库写入成功后，不等待从库的响应，直接返回“更新成功”，则复制是异步的，即弱一致性。</p><p>强一致性可以保证从库有与主库一致的数据。如果主库突然宕机，我们仍可以保证数据完整。但如果从库宕机或网络阻塞，主库就无法完成写入操作。</p><p>在实践中，我们通常使一个从库是同步的，而其他的则是异步的。如果这个同步的从库出现问题，则使另一个异步从库同步。这可以确保永远有两个节点拥有完整数据：主库和同步从库。 这种配置称为半同步。</p><h2 id="顺序一致性"><a href="#顺序一致性" class="headerlink" title="顺序一致性"></a>顺序一致性</h2><p>两个要求：</p><ul><li>任何一次读都能读到某个数据的最近一次写的数据。</li><li>系统的所有进程的顺序一致，而且是合理的。即不需要和全局时钟下的顺序一致，错的话一起错，对的话一起对。（强一致性的要求比顺序一致性更严格）</li></ul><p><a href="https://lotabout.me/2019/QQA-What-is-Sequential-Consistency/" target="_blank" rel="noopener">顺序一致性参考</a></p><h2 id="最终一致性"><a href="#最终一致性" class="headerlink" title="最终一致性"></a>最终一致性</h2><p>不保证在任意时刻任意节点上的同一份数据都是相同的，但是随着时间的迁移，不同节点上的同一份数据总是在向趋同的方向变化。</p><p>最终两个字用得很微妙，因为从写入主库到反映至从库之间的延迟，可能仅仅是几分之一秒，也可能是几个小时</p><ul><li>简单说，就是在一段时间后，节点间的数据会最终达到一致状态。</li></ul><h3 id="最终一致性的种类"><a href="#最终一致性的种类" class="headerlink" title="最终一致性的种类"></a>最终一致性的种类</h3><p>最终一致性根据更新数据后各进程访问到数据的时间和方式的不同，又可以区分为：</p><ul><li>因果一致性（Casual Consistency）。如果进程A通知进程B它已更新了一个数据项，那么进程B的后续访问将返回更新后的值，且一次写入将保证取代前一次写入。与进程A无因果关系的进程C的访问，遵守一般的最终一致性规则。</li><li>“读己之所写（read-your-writes）”一致性。当进程A自己更新一个数据项之后，它总是访问到更新过的值，绝不会看到旧值。这是因果一致性模型的一个特例。</li><li>会话（Session）一致性。这是上一个模型的实用版本，它把访问存储系统的进程放到会话的上下文中。只要会话还存在，系统就保证“读己之所写”一致性。如果由于某些失败情形令会话终止，就要建立新的会话，而且系统的保证不会延续到新的会话。</li><li>单调（Monotonic）读一致性。如果进程已经看到过数据对象的某个值，那么任何后续访问都不会返回在那个值之前的值。</li><li>单调写一致性。系统保证来自同一个进程的写操作顺序执行。要是系统不能保证这种程度的一致性，就非常难以编程了。</li></ul><p>原文链接：<a href="https://blog.csdn.net/a3125504x/article/details/109407748" target="_blank" rel="noopener">https://blog.csdn.net/a3125504x/article/details/109407748</a></p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="数据一致性"><a href="#数据一致性" class="headerlink" title="数据一致性"></a>数据一致性</h1><h2 id="什么是一致性"><a href="#什么是一致性" class="headerlink" title="什么是一致性"></a>什么是一致性</h2><p>在<a href="https://so.csdn.net/so/search?q=%E5%88%86%E5%B8%83%E5%BC%8F&spm=1001.2101.3001.7020" target="_blank" rel="noopener">分布式</a>系统中，一致性（Consistency）是指多副本（Replications）问题中的数据一致性。</p><h2 id="一致性的种类"><a href="#一致性的种类" class="headerlink" title="一致性的种类"></a>一致性的种类</h2><ul><li>事务一致性</li><li>数据一致性</li></ul><p>本文主要讨论数据一致性（事务一致性指ACID）</p><h2 id="导致一致性出现的原因"><a href="#导致一致性出现的原因" class="headerlink" title="导致一致性出现的原因"></a>导致一致性出现的原因</h2><ul><li>数据的分布式存储是导致出现一致性的唯一原因</li></ul><h2 id="强一致性-与-弱一致性"><a href="#强一致性-与-弱一致性" class="headerlink" title="强一致性 与 弱一致性"></a>强一致性 与 弱一致性</h2><p><strong>数据一致性的种类</strong></p><ul><li>强一致性（线性一致性）：即复制是同步的</li><li>弱一致性：即复制是异步的</li></ul><h3 id="强一致性两个要求"><a href="#强一致性两个要求" class="headerlink" title="强一致性两个要求"></a>强一致性两个要求</h3><ul><li>任何一次读都能读到某个数据的最近一次写的数据。</li><li>系统中的所有进程，看到的操作顺序，都和全局时钟下的顺序一致。</li></ul><p>简言之，在任意时刻，所有节点中的数据是一样的。</p><h3 id="弱一致性"><a href="#弱一致性" class="headerlink" title="弱一致性"></a>弱一致性</h3><p>数据更新后，如果能容忍后续的访问只能访问到部分或者全部访问不到，则是弱一致性。</p><p>最终一致性就属于弱一致性。</p><h3 id="强一致性和弱一致性举例"><a href="#强一致性和弱一致性举例" class="headerlink" title="强一致性和弱一致性举例"></a>强一致性和弱一致性举例</h3><p>例如，对于关系型数据库，要求更新过的数据能被后续的访问都能看到，这是强一致性<br>用户更新网站头像，在某个时间点，用户向主库发送更新请求，不久之后主库就收到了请求。在某个时刻，主库又会将数据变更转发给自己的从库。最后，主库通知用户更新成功。</p><p>如果在返回“更新成功”并使新头像对其他用户可见之前，主库需要等待从库的确认，确保从库已经收到写入操作，那么复制是同步的，即强一致性。如果主库写入成功后，不等待从库的响应，直接返回“更新成功”，则复制是异步的，即弱一致性。</p><p>强一致性可以保证从库有与主库一致的数据。如果主库突然宕机，我们仍可以保证数据完整。但如果从库宕机或网络阻塞，主库就无法完成写入操作。</p><p>在实践中，我们通常使一个从库是同步的，而其他的则是异步的。如果这个同步的从库出现问题，则使另一个异步从库同步。这可以确保永远有两个节点拥有完整数据：主库和同步从库。 这种配置称为半同步。</p><h2 id="顺序一致性"><a href="#顺序一致性" class="headerlink" title="顺序一致性"></a>顺序一致性</h2><p>两个要求：</p><ul><li>任何一次读都能读到某个数据的最近一次写的数据。</li><li>系统的所有进程的顺序一致，而且是合理的。即不需要和全局时钟下的顺序一致，错的话一起错，对的话一起对。（强一致性的要求比顺序一致性更严格）</li></ul><p><a href="https://lotabout.me/2019/QQA-What-is-Sequential-Consistency/" target="_blank" rel="noopener">顺序一致性参考</a></p><h2 id="最终一致性"><a href="#最终一致性" class="headerlink" title="最终一致性"></a>最终一致性</h2><p>不保证在任意时刻任意节点上的同一份数据都是相同的，但是随着时间的迁移，不同节点上的同一份数据总是在向趋同的方向变化。</p><p>最终两个字用得很微妙，因为从写入主库到反映至从库之间的延迟，可能仅仅是几分之一秒，也可能是几个小时</p><ul><li>简单说，就是在一段时间后，节点间的数据会最终达到一致状态。</li></ul><h3 id="最终一致性的种类"><a href="#最终一致性的种类" class="headerlink" title="最终一致性的种类"></a>最终一致性的种类</h3><p>最终一致性根据更新数据后各进程访问到数据的时间和方式的不同，又可以区分为：</p><ul><li>因果一致性（Casual Consistency）。如果进程A通知进程B它已更新了一个数据项，那么进程B的后续访问将返回更新后的值，且一次写入将保证取代前一次写入。与进程A无因果关系的进程C的访问，遵守一般的最终一致性规则。</li><li>“读己之所写（read-your-writes）”一致性。当进程A自己更新一个数据项之后，它总是访问到更新过的值，绝不会看到旧值。这是因果一致性模型的一个特例。</li><li>会话（Session）一致性。这是上一个模型的实用版本，它把访问存储系统的进程放到会话的上下文中。只要会话还存在，系统就保证“读己之所写”一致性。如果由于某些失败情形令会话终止，就要建立新的会话，而且系统的保证不会延续到新的会话。</li><li>单调（Monotonic）读一致性。如果进程已经看到过数据对象的某个值，那么任何后续访问都不会返回在那个值之前的值。</li><li>单调写一致性。系统保证来自同一个进程的写操作顺序执行。要是系统不能保证这种程度的一致性，就非常难以编程了。</li></ul><p>原文链接：<a href="https://blog.csdn.net/a3125504x/article/details/109407748" target="_blank" rel="noopener">https://blog.csdn.net/a3125504x/article/details/109407748</a></p><h4 id="如何基于我们的MQ解决我们的分布式事务的问题-最终一致性"><a href="#如何基于我们的MQ解决我们的分布式事务的问题-最终一致性" class="headerlink" title="如何基于我们的MQ解决我们的分布式事务的问题(最终一致性)"></a>如何基于我们的MQ解决我们的分布式事务的问题(最终一致性)</h4><ol><li>确保我们的生产者往我们的MQ投递消息一定要成功.(生产者消息确认机制confirm),实现重试.</li><li>确保我们的消费者能够消费成功(手动ack机制),如果消费失败情况下,MQ自动帮消费者重试.</li><li>确保我们的生产者第一事务先执行成功,如果执行失败采用补单队列.</li></ol><p><img src="https://img-blog.csdnimg.cn/20200309142645379.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3poYW5nc2hlbmdxaWFuZzE2OA==,size_16,color_FFFFFF,t_70" alt="img"></p>]]></content>
       
       
       <categories>
@@ -333,6 +412,19 @@
     
     
     <entry>
+      <title>我的第一篇博客文章</title>
+      <link href="/2021/10/18/wo-de-di-yi-pian-bo-ke-wen-zhang/"/>
+      <url>/2021/10/18/wo-de-di-yi-pian-bo-ke-wen-zhang/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>内容测试</p><hr><h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>内容</p><hr><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="http://www.codesheep.cn/" target="_blank" rel="noopener">www.codesheep.cn</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>博客搭建报错问题总结</title>
       <link href="/2021/10/18/bo-ke-da-jian-bao-cuo-zong-jie/"/>
       <url>/2021/10/18/bo-ke-da-jian-bao-cuo-zong-jie/</url>
@@ -352,19 +444,6 @@
             <tag> blog </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>我的第一篇博客文章</title>
-      <link href="/2021/10/18/wo-de-di-yi-pian-bo-ke-wen-zhang/"/>
-      <url>/2021/10/18/wo-de-di-yi-pian-bo-ke-wen-zhang/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>内容测试</p><hr><h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>内容</p><hr><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="http://www.codesheep.cn/" target="_blank" rel="noopener">www.codesheep.cn</a></p>]]></content>
-      
-      
       
     </entry>
     

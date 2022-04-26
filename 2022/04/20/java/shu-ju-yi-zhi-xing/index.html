@@ -610,14 +610,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-20
+                    2022-04-24
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    1.4k
                 </div>
                 
 
@@ -689,6 +689,12 @@
 <li>单调写一致性。系统保证来自同一个进程的写操作顺序执行。要是系统不能保证这种程度的一致性，就非常难以编程了。</li>
 </ul>
 <p>原文链接：<a href="https://blog.csdn.net/a3125504x/article/details/109407748" target="_blank" rel="noopener">https://blog.csdn.net/a3125504x/article/details/109407748</a></p>
+<h4 id="如何基于我们的MQ解决我们的分布式事务的问题-最终一致性"><a href="#如何基于我们的MQ解决我们的分布式事务的问题-最终一致性" class="headerlink" title="如何基于我们的MQ解决我们的分布式事务的问题(最终一致性)"></a>如何基于我们的MQ解决我们的分布式事务的问题(最终一致性)</h4><ol>
+<li>确保我们的生产者往我们的MQ投递消息一定要成功.(生产者消息确认机制confirm),实现重试.</li>
+<li>确保我们的消费者能够消费成功(手动ack机制),如果消费失败情况下,MQ自动帮消费者重试.</li>
+<li>确保我们的生产者第一事务先执行成功,如果执行失败采用补单队列.</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/20200309142645379.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3poYW5nc2hlbmdxaWFuZzE2OA==,size_16,color_FFFFFF,t_70" alt="img"></p>
 
                 
             </div>
@@ -1268,18 +1274,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/04/20/java/shu-ju-yi-zhi-xing/">
+                <a href="/2022/04/20/java/bit-yu-byte/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="数据一致性">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="bit与byte">
                         
-                        <span class="card-title">数据一致性</span>
+                        <span class="card-title">bit与byte</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1289,27 +1294,34 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-20
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-20
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Data/" class="post-category">
-                                    Data
+                            <a href="/categories/Java%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    Java基础
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Data/">
-                        <span class="chip bg-color">Data</span>
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                    <a href="/tags/bit/">
+                        <span class="chip bg-color">bit</span>
+                    </a>
+                    
+                    <a href="/tags/byte/">
+                        <span class="chip bg-color">byte</span>
                     </a>
                     
                 </div>
@@ -1589,7 +1601,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">21.7k</span>&nbsp;字
+                class="white-color">24.3k</span>&nbsp;字
             
             
             

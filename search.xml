@@ -125,7 +125,7 @@
       <link href="/2022/05/20/you-xi/quan-shen-zhui-zong-she-zhi-tundra-tracker-pian/"/>
       <url>/2022/05/20/you-xi/quan-shen-zhui-zong-she-zhi-tundra-tracker-pian/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="全身追踪设置（tundra-tracker）"><a href="#全身追踪设置（tundra-tracker）" class="headerlink" title="全身追踪设置（tundra tracker）"></a>全身追踪设置（tundra tracker）</h1><h2 id="1、先把steam设置为测试版本"><a href="#1、先把steam设置为测试版本" class="headerlink" title="1、先把steam设置为测试版本"></a>1、先把steam设置为测试版本</h2><p><img src="C:\Users\Dragon_Lan\blog\themes\matery\source\imgs\游戏\steamVR设置为测试版.png" alt="steamVR设置为测试版"></p><h2 id="2、进入steamVR目录"><a href="#2、进入steamVR目录" class="headerlink" title="2、进入steamVR目录"></a>2、进入steamVR目录</h2><p>打开steamVR目录，进入resources→setting文件夹，修改其中default.vrsettings文件</p><p><img src="C:\Users\Dragon_Lan\blog\themes\matery\source\imgs\游戏\steamVR默认设置.png" alt="steamVR默认设置"></p><p>“requireHmd”: true,改为”requireHmd”: false,</p><p>“activateMultipleDrivers”: false,改为”activateMultipleDrivers”: true,</p><p><img src="C:\Users\Dragon_Lan\blog\themes\matery\source\imgs\游戏\修改default.vrsetting文件.png" alt="修改default.vrsetting文件"></p><pre class=" language-tex"><code class="language-tex">"requireHmd": false,"activateMultipleDrivers": true,</code></pre><h2 id="3、下载安装OpenVR-SpaceCalibrator插件"><a href="#3、下载安装OpenVR-SpaceCalibrator插件" class="headerlink" title="3、下载安装OpenVR-SpaceCalibrator插件"></a>3、下载安装OpenVR-SpaceCalibrator插件</h2><p>下载地址：<a href="https://github.com/pushrax/OpenVR-SpaceCalibrator/releases" target="_blank" rel="noopener">https://github.com/pushrax/OpenVR-SpaceCalibrator/releases</a></p><p>一键式安装完成</p><p><img src="C:\Users\Dragon_Lan\blog\themes\matery\source\imgs\游戏\OpenVR-SpaceCalibrator插件安装.png" alt="OpenVR-SpaceCalibrator插件安装"></p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="全身追踪设置（tundra-tracker）"><a href="#全身追踪设置（tundra-tracker）" class="headerlink" title="全身追踪设置（tundra tracker）"></a>全身追踪设置（tundra tracker）</h1><h2 id="1、先把steam设置为测试版本"><a href="#1、先把steam设置为测试版本" class="headerlink" title="1、先把steam设置为测试版本"></a>1、先把steam设置为测试版本</h2><p><img src="https://dragonlanqaq.gitee.io/imgs/%E6%B8%B8%E6%88%8F/steamVR%E8%AE%BE%E7%BD%AE%E4%B8%BA%E6%B5%8B%E8%AF%95%E7%89%88.png" alt="steamVR设置为测试版"></p><h2 id="2、进入steamVR目录"><a href="#2、进入steamVR目录" class="headerlink" title="2、进入steamVR目录"></a>2、进入steamVR目录</h2><p>打开steamVR目录，进入resources→setting文件夹，修改其中default.vrsettings文件</p><p><img src="https://dragonlanqaq.gitee.io/imgs/%E6%B8%B8%E6%88%8F/steamVR%E9%BB%98%E8%AE%A4%E8%AE%BE%E7%BD%AE.png" alt="steamVR默认设置"></p><p>“requireHmd”: true,改为”requireHmd”: false,</p><p>“activateMultipleDrivers”: false,改为”activateMultipleDrivers”: true,</p><p><img src="https://dragonlanqaq.gitee.io/imgs/%E6%B8%B8%E6%88%8F/%E4%BF%AE%E6%94%B9default.vrsetting%E6%96%87%E4%BB%B6.png" alt="修改default.vrsetting文件"></p><pre class=" language-tex"><code class="language-tex">"requireHmd": false,"activateMultipleDrivers": true,</code></pre><h2 id="3、下载安装OpenVR-SpaceCalibrator插件"><a href="#3、下载安装OpenVR-SpaceCalibrator插件" class="headerlink" title="3、下载安装OpenVR-SpaceCalibrator插件"></a>3、下载安装OpenVR-SpaceCalibrator插件</h2><p>下载地址：<a href="https://github.com/pushrax/OpenVR-SpaceCalibrator/releases" target="_blank" rel="noopener">https://github.com/pushrax/OpenVR-SpaceCalibrator/releases</a></p><p>一键式安装完成</p><p><img src="https://dragonlanqaq.gitee.io/imgs/%E6%B8%B8%E6%88%8F/OpenVR-SpaceCalibrator%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85.png" alt="OpenVR-SpaceCalibrator插件安装"></p>]]></content>
       
       
       <categories>
@@ -623,19 +623,6 @@
     
     
     <entry>
-      <title>我的第一篇博客文章</title>
-      <link href="/2021/10/18/wo-de-di-yi-pian-bo-ke-wen-zhang/"/>
-      <url>/2021/10/18/wo-de-di-yi-pian-bo-ke-wen-zhang/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>内容测试</p><hr><h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>内容</p><hr><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="http://www.codesheep.cn/" target="_blank" rel="noopener">www.codesheep.cn</a></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>博客搭建报错问题总结</title>
       <link href="/2021/10/18/bo-ke-da-jian-bao-cuo-zong-jie/"/>
       <url>/2021/10/18/bo-ke-da-jian-bao-cuo-zong-jie/</url>
@@ -655,6 +642,19 @@
             <tag> blog </tag>
             
         </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>我的第一篇博客文章</title>
+      <link href="/2021/10/18/wo-de-di-yi-pian-bo-ke-wen-zhang/"/>
+      <url>/2021/10/18/wo-de-di-yi-pian-bo-ke-wen-zhang/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>内容测试</p><hr><h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>内容</p><hr><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="http://www.codesheep.cn/" target="_blank" rel="noopener">www.codesheep.cn</a></p>]]></content>
+      
+      
       
     </entry>
     

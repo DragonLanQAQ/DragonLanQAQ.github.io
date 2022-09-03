@@ -1,0 +1,2112 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<link rel="stylesheet" type="text/css" href="/libs/artitalk/artitalk.min.css">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Java面试题, DragonLan,HTML,CSS,JavaScript,JQuery,React,Vue.js等">
+    <meta name="description" content="Java基础1. String 和StringBuffer和 StringBuilder的区别？
+           String 是字符串常量 
+
+tringBuffer 是字符串变量（线程安全）StringBuilder 是字符串变量">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Java面试题 | 斓龙的个人博客</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="斓龙的个人博客" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+
+<script src="/js/cursor.js"></script>
+<body>
+	<div class="stars-con">
+      <div id="stars"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>  
+    </div>
+    
+	<svg aria-hidden="true" style="position: absolute; overflow: hidden; width: 0; height: 0">
+		<symbol id="icon-sun" viewBox="0 0 1024 1024">
+		  <path d="M960 512l-128 128v192h-192l-128 128-128-128H192v-192l-128-128 128-128V192h192l128-128 128 128h192v192z" fill="#FFD878" p-id="8420"></path>
+		  <path d="M736 512a224 224 0 1 0-448 0 224 224 0 1 0 448 0z" fill="#FFE4A9" p-id="8421"></path>
+		  <path d="M512 109.248L626.752 224H800v173.248L914.752 512 800 626.752V800h-173.248L512 914.752 397.248 800H224v-173.248L109.248 512 224 397.248V224h173.248L512 109.248M512 64l-128 128H192v192l-128 128 128 128v192h192l128 128 128-128h192v-192l128-128-128-128V192h-192l-128-128z" fill="#4D5152" p-id="8422"></path>
+		  <path d="M512 320c105.888 0 192 86.112 192 192s-86.112 192-192 192-192-86.112-192-192 86.112-192 192-192m0-32a224 224 0 1 0 0 448 224 224 0 0 0 0-448z" fill="#4D5152" p-id="8423"></path>
+		</symbol>
+		<symbol id="icon-moon" viewBox="0 0 1024 1024">
+		  <path d="M611.370667 167.082667a445.013333 445.013333 0 0 1-38.4 161.834666 477.824 477.824 0 0 1-244.736 244.394667 445.141333 445.141333 0 0 1-161.109334 38.058667 85.077333 85.077333 0 0 0-65.066666 135.722666A462.08 462.08 0 1 0 747.093333 102.058667a85.077333 85.077333 0 0 0-135.722666 65.024z" fill="#FFB531" p-id="11345"></path>
+		  <path d="M329.728 274.133333l35.157333-35.157333a21.333333 21.333333 0 1 0-30.165333-30.165333l-35.157333 35.157333-35.114667-35.157333a21.333333 21.333333 0 0 0-30.165333 30.165333l35.114666 35.157333-35.114666 35.157334a21.333333 21.333333 0 1 0 30.165333 30.165333l35.114667-35.157333 35.157333 35.157333a21.333333 21.333333 0 1 0 30.165333-30.165333z" fill="#030835" p-id="11346"></path>
+		</symbol>
+	</svg>
+      <a onclick="switchNightMode()" class="icon-V hidden" title="切换主题">
+        <svg width="48" height="48" viewBox="0 0 1024 1024">
+          <use id="modeicon" xlink:href="#icon-moon"></use>
+        </svg>
+      </a>
+<script>
+      function checkNightMode() {
+        '1' === localStorage.getItem('isDark') ? ($('body').addClass('DarkMode'), $('#changeMode-top').removeClass('fa-moon').addClass('fa-sun'), $('#modeicon').attr('xlink:href', '#icon-sun')) : '0' === localStorage.getItem('isDark') ? $('#modeicon').attr('xlink:href', '#icon-moon') : new Date().getHours() >= 20 || new Date().getHours() < 7 ? ($('body').addClass('DarkMode'), $('#changeMode-top').removeClass('fa-moon').addClass('fa-sun'), $('#modeicon').attr('xlink:href', '#icon-sun')) : matchMedia('(prefers-color-scheme: dark)').matches ? ($('body').addClass('DarkMode'), $('#changeMode-top').removeClass('fa-moon').addClass('fa-sun'), $('#modeicon').attr('xlink:href', '#icon-sun')) : $('#modeicon').attr('xlink:href', '#icon-moon')
+      }
+      function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+          setTimeout(function () {
+            $('body').hasClass('DarkMode') ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#changeMode-top').removeClass('fa-sun').addClass('fa-moon'), $('#modeicon').attr('xlink:href', '#icon-moon')) : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#changeMode-top').removeClass('fa-moon').addClass('fa-sun'), $('#modeicon').attr('xlink:href', '#icon-sun')),
+              setTimeout(function () {
+                $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                  $(this).remove()
+                })
+              }, 2e3)
+          })
+      }
+      
+      function switchNightModeTop() {
+        $('body').hasClass('DarkMode') ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#changeMode-top').removeClass('fa-sun').addClass('fa-moon'), $('#modeicon').attr('xlink:href', '#icon-moon')) : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#changeMode-top').removeClass('fa-moon').addClass('fa-sun'), $('#modeicon').attr('xlink:href', '#icon-sun'))
+      }
+      
+      checkNightMode(),
+        $('.menu-V .toggle').on('click', function () {
+          $('.menu-V').toggleClass('expanded'), $('.menu-V a').toggleClass('hidden'), $('.menu-V .container-M , .toggle').toggleClass('close')
+        })
+      
+      //function switchNightMode() {
+      //  $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+      //    setTimeout(function () {
+      //      $('body').hasClass('DarkMode') ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#changeMode-top').removeClass('fa-sun').addClass('fa-moon'), $('#modeicon').attr('xlink:href', '#icon-moon')) : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#changeMode-top').removeClass('fa-moon').addClass('fa-sun'), $('#modeicon').attr('xlink:href', '#icon-sun')),
+      //        setTimeout(function () {
+      //          $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+      //            $(this).remove()
+      //          })
+      //        }, 2e3)
+      //    })
+      //}
+      
+      //function switchNightModeTop() {
+      //  $('body').hasClass('DarkMode') ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#changeMode-top').removeClass('fa-sun').addClass('fa-moon'), $('#modeicon').attr('xlink:href', '#icon-moon')) : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#changeMode-top').removeClass('fa-moon').addClass('fa-sun'), $('#modeicon').attr('xlink:href', '#icon-sun'))
+      //}
+      //checkNightMode(),
+      //  $('.menu-V .toggle').on('click', function () {
+      //    $('.menu-V').toggleClass('expanded'), $('.menu-V a').toggleClass('hidden'), $('.menu-V .container-M , .toggle').toggleClass('close')
+      //  })
+    </script>
+
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">斓龙的个人博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/artitalk" class="waves-effect waves-light">
+      
+      <i class="fas fa-comment" style="zoom: 0.6;"></i>
+      
+      <span>ArtiTalk</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>摸鱼</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/musics">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>音乐</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/games">
+          
+          <i class="fas fa-gamepad" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>游戏</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">斓龙的个人博客</div>
+        <div class="logo-desc">
+            
+            欢迎来到斓龙的个人博客
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/artitalk" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comment"></i>
+			
+			ArtiTalk
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			摸鱼
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/musics " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>音乐</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/games " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-gamepad" style="position: absolute;left:50px" ></i>
+			      
+		          <span>游戏</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/DragonLanQAQ" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Github
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #ff00cc;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/DragonLanQAQ" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Github" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Java面试题</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        //padding-bottom: 30px;
+        //overflow: auto;
+        height: calc(100vh - 250px);
+		overflow: scroll;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
+                            </a>
+                        
+                            <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                                <span class="chip bg-color">面试</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Java/" class="post-category">
+                                Java
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-11-02
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-11-16
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    5.4k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    19 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h2><pre><code>1. String 和StringBuffer和 StringBuilder的区别？
+           String 是字符串常量 
+</code></pre>
+<p>tringBuffer 是字符串变量（线程安全）<br>StringBuilder 是字符串变量（非线程安全）</p>
+<p>String对象是一个不可被修改的字符串（内部用于存储的形式为private final char value[];），所以String是字符串常量。<br>StringBuffer和StringBuilder是“可变的字符串”（内部用于存储的形式为private char value[];），所以是字符串变量<br>而StringBuffer是线程安全的，StringBuilder是非线程安全的，因为StringBuffer的所有公开方法都是有synchronized修饰的同步方法</p>
+<p>对String对象的拼接操作实则是使用StringBuffer的连续append操作，但是！自JDK5及以后的版本中对“锁机制”进行了优化，对字符串的加法操作会转化为StringBuilder的连续append<br>虚拟机对StringBuffer.append()的操作对象进行逃逸分析，如果该操作对象不会逃逸出当前方法，则会对append操作进行“锁消除”处理，再解释运行时这里仍会加锁，但经过编译之后会忽略所有同步锁直接执行</p>
+<p>参考：<br><a href="https://blog.csdn.net/zhangjg_blog/article/details/18319521" target="_blank" rel="noopener">https://blog.csdn.net/zhangjg_blog/article/details/18319521</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzI3ODcxMzQzMw==&amp;mid=2247488178&amp;idx=1&amp;sn=e562f1904cd213b54fd6e1904d493b0f&amp;chksm=eb539784dc241e92cd3a91639b2e7eb3cb91f59f1d1ab75ffd4a521c16d965772dfa858bb19f&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">https://mp.weixin.qq.com/s?__biz=MzI3ODcxMzQzMw==&amp;mid=2247488178&amp;idx=1&amp;sn=e562f1904cd213b54fd6e1904d493b0f&amp;chksm=eb539784dc241e92cd3a91639b2e7eb3cb91f59f1d1ab75ffd4a521c16d965772dfa858bb19f&amp;scene=21#wechat_redirect</a><br>《深入理解Java虚拟机第三版》</p>
+<pre><code>2. sleep() 区间wait()区间有什么区别？
+</code></pre>
+<p>sleep是Thread对象的方法，wait是Object提供的方法<br>sleep使线程待指定时间，直到时间结束后恢复正常运行，不会释放任何资源（源码注释：The thread does not lose ownership of any monitors），如果该线程在持有锁的同步块中，其他线程无法抢占<br>wait的使用必须是在同步方法中，调用后将释放当前线程持有的锁资源，等待其他线程调用notify()或者notifyAll()方法将其唤醒</p>
+<pre><code>3. Object 中有哪些方法？其中clone()，怎么实现一个对象的克隆,Java如何实现深度克隆？
+</code></pre>
+<p>1.object、getClass、wait、clone、notify、notifyAll、toString、hashCode<br>2.实现一个对象的克隆要使该对象实现Cloneable空接口，将Object中protected类型的clone方法重写为public类型。<br>3.深克隆是相对于“浅拷贝”只能拷贝对象中基本数据类型的参数而说的，其希望完全克隆对象中包含的引用数据类型，<br>3.1实现方式为在引用数据类型也实现Cloneable空接口并重写clone方法，在外层对象中调用<br>3.2或者使用序列化/反序列（实现Serializable接口）化手段进行深度克隆，可以借助Gson等序列化插件工具</p>
+<p>ThreadLocal 相关<br><a href="https://www.cnblogs.com/dreamroute/p/5034726.html" target="_blank" rel="noopener">https://www.cnblogs.com/dreamroute/p/5034726.html</a><br>ThreadLocal 是 线程局部变量，其是“线程封闭”的一种实现手段，这个类能使线程中的某个值与保存值的对象关联起来。</p>
+<pre><code>4. ThreadLocal作用和实现方式 ?
+</code></pre>
+<p>1.作用：<br>1.1为每个使用ThreadLocal所保存变量的线程都存一份该变量的副本，防止对单例变量和全局变量进行共享。<br>1.2可以用来在线程中隐式传递参数。如某个线程中有方法的多级方法调用，而并非所有层级都会使用写带来的参数，此时可将参数存储于ThreadLocal中。</p>
+<p>参考：<br><a href="https://www.zhihu.com/question/341005993" target="_blank" rel="noopener">https://www.zhihu.com/question/341005993</a><br><a href="http://www.majiang.life/blog/the-smart-way-of-passing-parameter-by-threadlocal/" target="_blank" rel="noopener">http://www.majiang.life/blog/the-smart-way-of-passing-parameter-by-threadlocal/</a><br>《Java 并发编程实战》 Brian Goetz</p>
+<pre><code>ThreadLocal会不会发生内存泄漏?
+</code></pre>
+<p>会存在内存泄漏，因为</p>
+<pre><code>ThreadLocal为什么使用弱引用?
+
+5. InheritableThreadLocal作用和实现方式 ？
+</code></pre>
+<p>InheritableThreadLocal用于父子线程之间的值传递，创建子线程时会将父线程InheritableThreadLocal的值给子线程。</p>
+<pre><code>6. InheritableThreadLocal所带来的问题？
+</code></pre>
+<p>1.InheritableThreadLocal在传递给子线程时，对于引用数据类型是传递引用，子线程对引用数据的修改会影响到父线程。<br>2.使用线程池时，线程执行完毕所在线程可能会保存复用，因此不再重新创建线程，因为InheritableThreadLocal值传递是在创建线程阶段，所以可能对导致传值失败</p>
+<pre><code>7. 如何解决线程池异步值传递问题 (transmittable-thread-local)?
+</code></pre>
+<p>阿里开源的transmittable-thread-local可以很好的解决 在线程池情况下,父子线程值传递问题;TransmittableThreadLocal继承了InheritableThreadLocal, 简单的原理就是TTL 中的holder持有的是当前线程内的所有本地变量,被包装的run方法执行异步任务之前，会使用replay进行设置父线程里的本地变量给当前子线程，任务执行完毕，会调用restore恢复该子线程原生的本地变量<br>即：执行前同步更新一下，执行后恢复一下</p>
+<p>HashMap ConcurrentHashMap相关</p>
+<pre><code>9. HashMap为什么线程不安全
+</code></pre>
+<p>JDK1.7在多线程插入进行扩容操作时会有循环引用和数据丢失的风险。<br>JDK1.8之后多线程做PUT操作会有数据覆盖的风险<br>因为其操作并非原子操作</p>
+<pre><code>10. HashMap在jdk7和8中的区别
+11. HashMap 为啥将链表改成红黑树？
+</code></pre>
+<p>JDK7中采用数组+单链表的结构<br>JDK8中采用数组+链表+红黑树的数据结构，当链表长度达到8时，转为红黑树存储，降低查询的时间复杂度O(logN)提高了查询效率</p>
+<pre><code>12. ConcurrentHashMap在jdk7和8中的区别?
+</code></pre>
+<p>ConcurrentHashMap采用锁分段机制，细化了锁粒度，允许多线程并发对集合进行读写</p>
+<pre><code>提到synchronized时候*,顺便说一下javaSE1.6对锁的优化？
+</code></pre>
+<p>*synchronized 两大点：<br>1.synchronized修饰的同步块对同一个线程是可重入的（同一个线程反复进入同步块不会被锁死）<br>2.synchronized修饰的同步块 在持有锁的线程完全释放锁之前，其他线程只能阻塞等待。</p>
+<pre><code>    轻量级锁
+    TODO 是锁优化的一个方案
+
+    重量级锁
+       Java线程的阻塞以及唤醒，都是依靠操作系统来完成的,这些操作将涉及系统调用，需要从操作系统 的用户态切换至内核态，其开销非常之大。
+</code></pre>
+<p>如synchronize<br>其他优化<br>1.自旋（1.4就有了）与自适应旋转<br>减少线程切换带来的性能开销，对“简短”的线程有好处，自旋（实际上就是循环调用CAS算法的重试）期间不释放资源，所以不能长期自旋，1.6之前默认自旋10次，1.6之后引入了“自适应自旋”（参考锁拥有者状态和上一个线程自旋时间）<br>2.锁消除<br>经过逃逸分析算法确认在堆上的所有数据都不会逃逸出被其他线程访问。那就当做栈上数据（栈上数据是线程独立的）对待，认为是线程私有的，锁可以去除<br>3.锁粗化<br>如果一组操作反复对同一个对象加解锁（如StringBuffer的连续append）那么虚拟机会把枷锁操作扩展（粗化）到整个操作序列的外部 （说白了就是一起打包加锁，但前提是对同一个操作对象反复加解锁）<br>4.轻量级锁<br>TODO<br>5.偏向锁<br>TODO</p>
+<pre><code>ReentrantLock和synchronized的区别？
+      相同点对同一条线程都是可重入的
+
+    Synchronized
+</code></pre>
+<p>synchronize是重量级锁，其加解锁操作直接映射为操作系统对线程的操作，会导致从“用户态”到“内核态”之间的切换，从而造成资源浪费</p>
+<pre><code>    ReentrantLock
+</code></pre>
+<p>ReentrantLock是JDK5之后基于J.U.C包提供的Lock接口的实现*，相对于synchronize多了三个功能：<br>1.等待可中断：长期等待时可以选择放弃<br>2.公平锁：按照申请锁的时间顺序获得锁<br>3.锁定多个条件：synchronize 的wait、配合notify或notifyAll可以实现一个隐含条件，要想实现多个就必须反复上锁，ReentrantLock则只需要多次调用 new Condition()方法即可<br>synchronize是系统控制，出现异常也可释放锁，而ReentrantLock需要在finally中释放锁<br>*自从jdk5以后Java类库中提供了java.util.concurrent包其中的java.util.concurrent.locks.Lock接口，改为在类库层面实现同步，重入锁（ReentrantLock）是Lock接口最常见的实现。</p>
+<pre><code>13. 为什么重写equals时候被要求重写hashCode（）？
+</code></pre>
+<p>1.Object原生equals是采用==比较地址进行判断，重写equals是为了根据对象属性判断量对象属性是否相等<br>2..重写hashCode是因为集合存储中是先根据hash code判断对象是否存在，所以如果重写后的equals认为两对象属性相等，则应使用equals中作为判定条件的属性计算hash code</p>
+<pre><code>14. 什么时候回发生内存泄露？让你写一段内存泄露的代码你会怎么写？
+</code></pre>
+<p>1.内存泄漏指的是：一个不再会被使用到的对象没有被回收导致的内存占用<br>2.比如一个短生命周期的方法，使用了类对象中的属性，方法执行完毕，则对象属性理应被回收，而根绝GC垃圾回收算法，只有当该类无对象引用时才会清除，就造成了内存泄漏。<br>3.解决，手动将该对象置空 Object=null</p>
+<p>Vector v = new Vector(10);<br>for (int i = 0; i &lt; 100; i++) {<br>Object o = new Object();<br>v.add(o);<br>o = null;<br>}<br>这里内部 Object o 虽然置为null 但外部Vector v仍然引用o 所以o不可被回收</p>
+<p>Java多线程内存模型</p>
+<p>线程之间的共享变量存储在主内存（main memory）中，每个线程都有一个私有的本地内存（local memory）</p>
+<pre><code>Java 内存模型中的 happen-before 是什么？
+</code></pre>
+<p>Java内存模型采用共享主内存的形式，在并发过程中围绕“原子性、可见性、有序性”三原则，而happen-before 就是对其有序性的顺序约束，如：将变量修改后同步到主内存，在变量读取前从主内存刷新变量，依靠此种happen-before的顺序操作来实现共享变量的可见性<br>参考：<br>《深入理解Java虚拟机》</p>
+<pre><code>简单聊聊volatile 的特性？以及内存语义
+</code></pre>
+<p>volatile有两项特性：<br>1.保证此变量对所有线程的可见性。即对volatile的写操作都能立刻反馈到其他线程中<br>2..保证此变量多线程下的读写原子性。读写原子性利用内存屏障禁止指令重排序优化<br>（但不能保证并发下的安全性，因为Java运算符不是原子操作，运算符最终会形成多条机器代码执行）</p>
+<p>Java内存空间模型</p>
+<p>GC垃圾回收</p>
+<pre><code>垃圾回收主要是针对 内存区的哪些区域？
+</code></pre>
+<p>堆内存：主要针对堆内存的新生代，大部分对象都是朝生夕灭的，针对新生代的回收性价比最高<br>方法区（次要）：方法区保存静态变量、常量、类型信息，在大量使用“反射、动态代理、CGLib等字节码框架”，这种频繁自定义类加载器的场景中有必要进行回收，《Java虚拟机规范》提到可以不针对该区域进行垃圾回收。</p>
+<pre><code>垃圾检查有哪些算法？
+</code></pre>
+<p>1.引用计数算法<br>2.可达性分析算法，以GCRoot根节点开始，以图论中的指向性分析可达性。“不可达”的将被清理</p>
+<pre><code>垃圾回收方法有哪些？
+</code></pre>
+<p>基于分代收集理论的算法有三种<br>1.标记-&gt;清除<br>2.标记-&gt;整理<br>3.标记-&gt;复制</p>
+<pre><code>什么时候会触发Full GC
+</code></pre>
+<p>当垃圾回收获得的可用空间不足以分配新建对象时</p>
+<pre><code>**GC机制**简要说明一下，不同区使用的算法。
+</code></pre>
+<p>新生代收集器：<br>Serial（客户端默认新生代）：复制算法，单线程回收,回收时暂停所有用户线程<br>ParNew（Serial的多线程）：复制算法，多线程并行回收，但回收时也会暂停所有用户线程<br>Parallel Scavenge（吞吐量）：复制算法，多线程并行回收，关注吞吐量（吞吐量=运行用户代码时间/处理器总消耗时间）,回收时暂停所有用户线程可控制停顿时间</p>
+<p>老年代收集器：<br>Serial Old：标记整理，单线程回收，回收时暂停所有用户线程<br>Parallel Old：标记整理，多线程并行回收，回收时暂停所有用户线程吞吐量优先<br>CMS（短停顿）：标记清除（初始标记GCRoot直接引用暂停所有用户线程，并发标记引用链，重新标记做修正暂停所有用户线程，并发清除）</p>
+<p>全区收集器：<br>G1：面向服务端,基于Region的内存划分，收集时间可控制，按受益大小回收。每个Region来看是“标记-复制”，宏观上是“标记-整理”</p>
+<pre><code>两个对象循环引用会不会被被GC？
+</code></pre>
+<p>要看GCRoot是否对其中的对象“可达”</p>
+<pre><code>哪些可以算作根节点？
+</code></pre>
+<p>栈中引用的对象（虚拟机栈、本地方法栈）<br>静态属性、常量引用的对象<br>被同步锁持有的对象<br>虚拟机内部引用的对象</p>
+<pre><code>垃圾收集器 G1有什么样的特性了解吗？ CMS呢？
+</code></pre>
+<p>G1是可预测停顿时间的全堆垃圾回收器<br>CMS是以获取最短停顿时间为目标的老年代收集器</p>
+<pre><code>CMS收集器和G1收集器的区别
+</code></pre>
+<p>区别一： 使用范围不一样<br>CMS收集器是老年代的收集器，可以配合新生代的Serial和ParNew收集器一起使用<br>G1收集器收集范围是老年代和新生代。不需要结合其他收集器使用<br>区别二： STW的时间<br>CMS收集器以最小的停顿时间为目标的收集器。<br>G1收集器可预测垃圾回收的停顿时间（建立可预测的停顿时间模型）<br>区别三： 垃圾碎片<br>CMS收集器是使用“标记-清除”算法进行的垃圾回收，容易产生内存碎片<br>G1收集器使用的是“标记-整理”算法，每个Region来看是“标记-复制”，进行了空间整合，降低了内存空间碎片。</p>
+<p>Jvm相关</p>
+<pre><code>Jvm内存结构简要说一些，栈里面一般存储了什么？
+
+Java内存模型简要描述一下?
+
+
+
+
+**类加载机制**简要描述一下?
+</code></pre>
+<p>虚拟机把描述类的数据从Class文件加载到内存，并对数据进行校验、转换解析和初始化，最终形成可以被虚拟机直接使用的java类型。类加载和连接的过程都是在运行期间完成的。</p>
+<pre><code>    类的加载方式
+</code></pre>
+<p>类加载实际是对class文件的加载，class文件的存在形式包括但不限于，网络、数据库、内存、磁盘、动态生成、jar/zip包</p>
+<pre><code>类加载的过程
+</code></pre>
+<p>类加载的生命周期：<br>加载（Loading）–&gt;验证（Verification）–&gt;准备（Preparation）–&gt;解析（Resolution）–&gt;初始化（Initialization）–&gt;使用（Using）–&gt;卸载（Unloading）<br>加载（读取class）–&gt;验证（校验是否可用）–&gt;准备（分配内存）–&gt;解析（引用指向实体）–&gt;初始化（构造方法）–&gt;使用（调用）–&gt;卸载（卸载）</p>
+<pre><code>JVM三种预定义类型类加载器
+
+
+    双亲委派加载
+
+    由不同的类加载器加载的指定类型还是相同的类型吗
+</code></pre>
+<p>不是，JAVA中的类使用完全限定名标识，JVM中使用完全限定名+类加载器（ClassLoader）标识<br>equals() / isInstance()/ instanceof / isAssignableFrom的比较只有在同一个类加载器下才有意义</p>
+<pre><code>    在代码中直接调用Class.forName（String name）方法，到底会触发那个类加载器进行类加载行为？
+</code></pre>
+<p>Class.forName(String name)默认会使用调用类的类加载器来进行类加载</p>
+<pre><code>    在编写自定义类加载器时，如果没有设定父加载器，那么父加载器是?
+</code></pre>
+<p>AppClassLoader</p>
+<pre><code>    编写自定义类加载器时，一般有哪些注意点？
+</code></pre>
+<p>一般尽量不要覆写已有的loadClass（…）方法中的委派逻辑; 这样做极有可能引起系统默认的类加载器不能正常工作</p>
+<pre><code>    如何在运行时判断系统类加载器能加载哪些路径下的类？
+</code></pre>
+<p>JDK9之前：获取到类加载器，调用ClassLoader.getURLs()<br>JDK9之后：引入java模块化系统，双亲委派关系发生变化。先判断要加载的类能否归属到一个模块，如果可以则委派给相应模块的类加载器加载。</p>
+<pre><code>在Java的反射中，Class.forName和ClassLoader的区别
+</code></pre>
+<p>Class.forName()也是使用ClassLoader实现类加载，里面调用forName0（）方法，initialize参数默认为true，即类加载时对其进行初始化操作（执行静态代码块、静态参数的赋值），而ClassLoader只是加载类到内存中<br><a href="https://www.cnblogs.com/jimoer/p/9185662.html" target="_blank" rel="noopener">https://www.cnblogs.com/jimoer/p/9185662.html</a></p>
+<pre><code>Java 类加载机制及常见异常
+
+    ClassNotFoundException 
+</code></pre>
+<p>发生在加载阶段，原因是没有找到要加载的类，导致原因可能为Class.forName()参数写错，没有相应的jar包导入</p>
+<pre><code> NoClassDefFoundError 通常在链接阶段
+</code></pre>
+<p>发生在 链接 阶段；类生命周期有7个阶段：<br>加载-验证-准备-解析-初始化-使用-卸载<br>其中 “验证-准备-解析”统称为链接阶段</p>
+<pre><code>Exception和Error的区别
+</code></pre>
+<p>Exception是可捕获的异常，Error是不可预料的错误无法通过异常处理来进行逻辑处理</p>
+<pre><code>平时有没有遇到一些栈溢出或者内存溢出，内存泄露的问题吗？如何去分析这个问题？
+</code></pre>
+<p>栈：<br>如果线程请求的栈深度大于虚拟机所允许的最大深度时：StackOverFlowError<br>如果虚拟机内存的栈内存允许动态扩展，当栈容量无法申请到足够内存时：OutOfMemoryError<br>堆：<br>当堆内存无法满足对象的内存分配需要时：OutOfMemoryError<br>先确定错误类型，再确定报错区域（堆/栈/方法区/运行时常量池）<br>栈：查看是否有死循环调用<br>堆：使用内存快照分析工具，确定问题原因</p>
+<pre><code>如果内存猛增，怎么去排查？
+</code></pre>
+<p>使用分析工具jstack分析每个线程的内存占用</p>
+<p>多线程</p>
+<pre><code>为什么《阿里巴巴Java开发手册》强制不允许使用Executor创建线程池
+</code></pre>
+<p>Executors创建出来的线程池使用的全都是无界队列，而使用无界队列会带来很多弊端，最重要的就是，它可以无限保存任务，因此很有可能造成OOM异常。</p>
+<p>ThreadPoolExecutor机制</p>
+<pre><code>下面是ThreadPoolExecutor最核心的构造方法参数：
+1）corePoolSize核心线程池的大小
+2）maximumPoolSize 最大线程池大小，当队列满了 就会创建新线程直至最大
+3）keepAliveTime 线程池中超过corePoolSize数目的空闲线程最大存活时间；可以allowCoreThreadTimeOut(true)使得核心线程超出有效时间也关闭
+4）TimeUnit keepAliveTime的时间单位
+5）workQueue阻塞任务队列
+6）threadFactory新建线程工厂,可以自定义工厂
+7）RejectedExecutionHandler当提交任务数超过maximumPoolSize+workQueue之和时，任务会交给RejectedExecutionHandler来处理
+</code></pre>
+<p>重点讲解</p>
+<pre><code>corePoolSize，maximumPoolSize，workQueue三者之间的关系
+1）当线程池小于corePoolSize时，新提交的任务会创建一个新线程执行任务，即使线程池中仍有空闲线程。
+2）当线程池达到corePoolSize时，新提交的任务将被放在workQueue中，等待线程池中的任务执行完毕
+3）当workQueue满了，并且maximumPoolSize &gt; corePoolSize时，新提交任务会创建新的线程执行任务
+4）当提交任务数超过maximumPoolSize，新任务就交给RejectedExecutionHandler来处理
+5）当线程池中超过 corePoolSize线程，空闲时间达到keepAliveTime时，关闭空闲线程
+6）当设置allowCoreThreadTimeOut(true)时，线程池中corePoolSize线程空闲时间达到keepAliveTime也将关闭
+</code></pre>
+<p>RejectedExecutionHandler拒绝策略</p>
+<pre><code>1、AbortPolicy策略：该策略会直接抛出异常，阻止系统正常工作；
+2、CallerRunsPolicy策略：如果线程池的线程数量达到上限，该策略会把任务队列中的任务放在调用者线程当中运行；
+3、DiscardOledestPolicy策略：该策略会丢弃任务队列中最老的一个任务，也就是当前任务队列中最先被添加进去的，马上要被执行的那个任务，并尝试再次提交；
+4、DiscardPolicy策略：该策略会默默丢弃无法处理的任务，不予任何处理。当然使用此策略，业务场景中需允许任务的丢失；
+</code></pre>
+<p>参考<br><a href="https://blog.csdn.net/qq_34436819/article/details/103207685?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-0.no_search_link&amp;spm=1001.2101.3001.4242.0" target="_blank" rel="noopener">https://blog.csdn.net/qq_34436819/article/details/103207685?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-0.no_search_link&amp;spm=1001.2101.3001.4242.0</a></p>
+<pre><code>线程设置越多越好吗？设置到什么值比较合理？
+</code></pre>
+<p>看业务具体定论</p>
+<p>锁</p>
+<pre><code>CAS实现机制？
+</code></pre>
+<p>CAS实际是一个CPU指令：比较并交换，对一个值得修改操作要先取得该值，获取到的值与预估值如果一直，则进行赋值操作，如果不一致，则重新获取再次尝试</p>
+<pre><code>CAS的ABA问题
+</code></pre>
+<p>取到的值和预估值一样，但不排除从获取到比较之间该值有“变化再变回”的可能，但ABA问题并不影响操作结果，要避免可以使用java提供的原子操作，或使用互斥锁</p>
+<p>算法</p>
+<pre><code>有哪些常用的排序算法？
+插入排序、希尔排序、堆排序、归并排序、快速排序
+</code></pre>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">斓龙</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://dragonlanqaq.gitee.io/2021/11/02/mian-shi/java-mian-shi-ti/">https://dragonlanqaq.gitee.io/2021/11/02/mian-shi/java-mian-shi-ti/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">斓龙</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+                            
+                                <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                                    <span class="chip bg-color">面试</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    /*卡片式背景*/
+    #vcomments .vcards .vcard {
+        padding: 15px 20px 0 20px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        box-shadow: 0 0 4px 1px rgba(0, 0, 0, .12);
+        transition: all .3s
+    }
+
+    #vcomments .vcards .vcard:hover {
+        box-shadow: 0 0 8px 3px rgba(0, 0, 0, .12)
+    }
+
+    #vcomments .vcards .vcard .vh .vcard {
+        border: none;
+        box-shadow: none;
+    }
+
+    /*鼠标放置头像旋转*/
+    img.vimg {
+        transition: all 1s /* 旋转时间为 1s */
+    }
+
+    img.vimg:hover {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+    }
+
+
+    /*===========背景图输入判断=========*/
+    #veditor:focus {
+        background-position-y: 200px;
+        transition: all 0.2s ease-in-out 0s;
+    }
+
+    /*==========修改评论框样式===========start====*/
+    .v .vwrap {
+        padding: 0 0 20px;
+    }
+
+    /*内容框高度*/
+    .v .veditor {
+        min-height: 7rem;
+        resize: none;
+    }
+
+    /*==========修改评论框样式===========end======*/
+
+    /*头部空白栏高度*/
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    /* valine 评论框增加背景图片 */
+    #vcomments textarea {
+        /*背景图贴边*/
+        margin-top: -30px;
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    /*回复颜色*/
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div id="vcomments" class="card-content" style="display: grid"></div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="https://unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'zUCpyKSjDMmPEh34CDQMcDK3-MdYXbMMI',
+        appKey: 'yPifpgcEciusLwkiVfKg1iP0',
+        tagMeta: ["博主","小伙伴","访客"],
+        master: '',
+        enableQQ: 'true' === 'true',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'false' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '昵称填写qq可以自动获取qq昵称和头像哦~'
+    });
+    // 点击回复直接评论
+    $(document).ready(function () {
+        $('.vemoji-btn').text('?');
+        $("#vcomments").on('click', 'span.vat', function () {
+            $(this).parent('div.vmeta').next("div.vcontent").after($("div.vwrap"));
+            $('textarea#veditor').focus();
+        })
+    });
+    // 自定义邮箱审核规则
+    document.body.addEventListener('click', function (e) {
+        if (e.target.classList.contains('vsubmit')) {
+            const email = document.querySelector('input[type=email]');
+            const nick = document.querySelector('input[name=nick]');
+            const reg = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+            if (!email.value || !nick.value || !reg.test(email.value)) {
+                const str = `<div class="valert text-center"><div class="vtext">请填写正确的昵称和邮箱！</div></div>`;
+                const vmark = document.querySelector('.vmark');
+                vmark.innerHTML = str;
+                vmark.style.display = 'block';
+                setTimeout(function () {
+                    vmark.style.display = 'none';
+                    vmark.innerHTML = '';
+                }, 2500);
+            }
+        }
+    })
+</script>
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/11/03/java/spring/spring-ru-men/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Spring入门">
+                        
+                        <span class="card-title">Spring入门</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-11-03
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Java/" class="post-category">
+                                    Java
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                    <a href="/tags/Spring/">
+                        <span class="chip bg-color">Spring</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/11/01/java/java-ji-chu-zhi-shi-pian/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="剖析⾯试最常⻅问题之Java集合框架">
+                        
+                        <span class="card-title">剖析⾯试最常⻅问题之Java集合框架</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Java/" class="post-category">
+                                    Java
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%88%B7%E9%A2%98/">
+                        <span class="chip bg-color">刷题</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                        <span class="chip bg-color">面试</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('100')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 斓龙的个人博客<br />'
+            + '文章作者: 斓龙<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '版权声明：本文为斓龙的原创文章，均采用 CC BY 4.0 许可协议。转载请附上原文出处链接及本声明!';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="7029904923"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.6'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2021-2022</span>
+            
+            <span id="year">2021</span>
+            <a href="/about" target="_blank">斓龙</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">28.6k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2021";
+                    var startMonth = "10";
+                    var startDate = "16";
+                    var startHour = "12";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/DragonLanQAQ" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:2948616279@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+    <a href="https://twitter.com/DragonLan_VR" class="tooltipped" target="_blank" data-tooltip="关注我的Twitter: https://twitter.com/DragonLan_VR" data-position="top" data-delay="50">
+        <i class="fab fa-twitter"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2948616279" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2948616279" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+    <a href="https://weibo.com/u/2972568894" class="tooltipped" target="_blank" data-tooltip="关注我的微博: https://weibo.com/u/2972568894" data-position="top" data-delay="50">
+        <i class="fab fa-weibo"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="https://space.bilibili.com/4916545" class="tooltipped" target="_blank" data-tooltip="关注我的bilibili频道: https://space.bilibili.com/4916545" data-position="top" data-delay="50">
+        <i class="nexmoefont icon-bilibili">B</i>
+    </a>
+
+
+
+</div>
+    </div>
+	
+	  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+	  <script>
+		if (window.mermaid) {
+		  mermaid.initialize({theme: 'forest'});
+		}
+	  </script>
+	
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+	<script type="text/javascript" color="0,0,255" pointcolor="0,0,255" opacity="0.7" zindex="-1" count="99" src="/libs/background/canvas-nest.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i["DaoVoiceObject"] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            a.charset = "utf-8";
+            m.parentNode.insertBefore(a, m)
+        })(window, document, "script", ('https:' == document.location.protocol ? 'https:' : 'http:') +
+            "//widget.daovoice.io/widget/6984b559.js", "daovoice")
+        daovoice('init', {
+            app_id: "d8a9e01e"
+        });
+        daovoice('update');
+    </script>
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon-refresh.min.js" async="async"></script>
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/unitychan.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":40,"vOffset":-15},"mobile":{"show":true,"scale":0.8},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body>
+
+</html>

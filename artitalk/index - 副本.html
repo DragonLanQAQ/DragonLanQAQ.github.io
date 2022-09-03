@@ -519,104 +519,33 @@
     </div>
 </div>
 
-<style ype="text/css">
-
-#pubShuo {
-
-  margin-right: 5px;
-}
-
-#operare_artitalk .shuoshuo_input_log {
-    outline-style: none;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    padding: 8px 16px;
-    font-size: 12px;
-    background-color: transparent;
-
-    color: #0bb7fbd6;
-    width: 70%;
-    height: 28px;
-    margin-left: 10px;
-}
-
-#artitalk_main {
-
-  margin-top: 5px ;
-  margin-left: 5%;
-  margin-right: 5%;
-
-}
-
-#lazy{
-  margin-top: 40px;
-}
-
-</style>
-
-
-<script src="/libs/artitalk/artitalk.min.js"></script>
-
-<article id="articles11" class="container  chip-container">
-  <div class="row ">
-
-      <div class=" card">
-        <div class="card-content" >
-          <div class="tag-title center-align">
-                <i class="fas fa-pen-alt"></i> 说说
-           </div>
-          <div id="artitalk_main"></div>
-        </div>  
+<main class="content">
+  <div class="container friends-container">
+      <div class="card">
+          <div class="card-content">
+              <!-- artitalk -->
+              <script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+              <script>
+                var img = "https://dragonlanqaq.gitee.io/medias/avatar.jpg"; //说说旁边显示的头像
+                var appID = "w39KgKmwF8vrkYs7zbqvPhjW-MdYXbMMI";
+                var appKEY = "p0NzTTwyU77COzjqnuTMVQpE";
+                var per = "10"; //每页显示说说的数量
+                var username = "Dragon_Lan"; //Leancloud中设置的用户名
+                var placeholder1="只有Dragon_Lan才能评论哦";
+                var placeholder2="没有密码，不能评论！";
+                var lazy = 1;
+                var bgimg = "https://gitee.com/cungudafa/source/raw/master/img/gif/Sitich/Sitich16.gif";
+              </script>
+              <div id="lazy"></div>
+              <div id="artitalk"></div>
+              <script type="text/javascript" src="https://unpkg.com/artitalk"></script>
+              <!-- artitalk.end -->
+          </div>
       </div>
-
   </div>
-</article>
-<script>
-  new Artitalk({
-        appId: "w39KgKmwF8vrkYs7zbqvPhjW-MdYXbMMI",
-        appKey: "p0NzTTwyU77COzjqnuTMVQpE",
-      
-      
-          lang: "zh",
-      
-      
-          pageSize: "5",
-      
-      
-      
-          avatarPla: "https://dragonlanqaq.gitee.io/medias/avatar.jpg",
-      
-      
-          motion: 0,
-      
-      
-      
-          color1: "linear-gradient(45deg, rgb(109, 208, 242) 15%, rgb(245, 154, 190) 85%)",
-      
-      
-          color2: "linear-gradient(45deg, rgb(109, 208, 242) 15%, rgb(245, 154, 190) 85%)",
-      
-      
-          color3: "black",
-      
-      
-          atEmoji: {
-              baiyan: "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/baiyan.png",
-              bishi: "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/bishi.png",
-              bizui: "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/bizui.png",
-              chan: "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/chan.png",
-              daku: "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/daku.png",
-              dalao: "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/dalao.png",
-              dalian: "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/dalian.png",
-              dianzan: "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/dianzan.png",
-              doge: "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/doge.png",
-              facai: "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/facai.png",
-              fadai: "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/fadai.png",
-              fanu: "https://cdn.jsdelivr.net/gh/Artitalk/Artitalk-emoji/fanu.png",
-           },
-     })
-</script>
+</main>
+
+
 
     <footer class="page-footer bg-color">
     

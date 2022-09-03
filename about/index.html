@@ -38,6 +38,19 @@
 
 <script src="/js/cursor.js"></script>
 <body>
+<!-- https://cdn.jsdelivr.net/npm/sakana-widget@2.3.0/lib/sakana.min.js -->
+<!-- https://cdnjs.cloudflare.com/ajax/libs/sakana-widget/2.3.0/sakana.min.js -->
+<div id="sakana-widget"></div>
+<script>
+  function initSakanaWidget() {
+    new SakanaWidget().mount('#sakana-widget');
+  }
+</script>
+<script
+  async
+  onload="initSakanaWidget()"
+  src="https://cdn.jsdelivr.net/npm/sakana-widget@2.3.0/lib/sakana.min.js"
+></script>
 	<div class="stars-con">
       <div id="stars"></div>
       <div id="stars2"></div>
@@ -202,17 +215,6 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/artitalk" class="waves-effect waves-light">
-      
-      <i class="fas fa-comment" style="zoom: 0.6;"></i>
-      
-      <span>ArtiTalk</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
     <a href="" class="waves-effect waves-light">
 
       
@@ -342,17 +344,6 @@
 			    <i class="fa-fw fas fa-address-book"></i>
 			
 			友情链接
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/artitalk" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-comment"></i>
-			
-			ArtiTalk
 		</a>
           
         </li>
@@ -789,7 +780,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"Markdown","value":2},{"name":"blog","value":2},{"name":"java","value":1},{"name":"Java","value":4},{"name":"Java基础","value":2},{"name":"Master Data","value":1},{"name":"bug","value":1},{"name":"Data","value":1},{"name":"full body","value":1},{"name":"RabbitMQ","value":2}],
+                data: [{"name":"Markdown","value":2},{"name":"blog","value":2},{"name":"java","value":1},{"name":"Java","value":4},{"name":"Master Data","value":1},{"name":"Java基础","value":2},{"name":"Data","value":1},{"name":"bug","value":1},{"name":"full body","value":1},{"name":"RabbitMQ","value":2}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -813,7 +804,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["Java","面试","Typora","Markdown","blog","RabbitMQ","java","刷题","bit","byte"]
+                data: ["Java","面试","Typora","Markdown","blog","RabbitMQ","java","刷题","Master Data","bit"]
             }
         ],
         yAxis: [
@@ -1034,6 +1025,12 @@
             
             
             
+            <a href="/tags/Master-Data/">
+                <span class="chip center-align waves-effect waves-light chip-default">Master Data</span>
+            </a>
+            
+            
+            
             <a href="/tags/bit/">
                 <span class="chip center-align waves-effect waves-light chip-default">bit</span>
             </a>
@@ -1046,8 +1043,8 @@
             
             
             
-            <a href="/tags/Master-Data/">
-                <span class="chip center-align waves-effect waves-light chip-default">Master Data</span>
+            <a href="/tags/Data/">
+                <span class="chip center-align waves-effect waves-light chip-default">Data</span>
             </a>
             
             
@@ -1060,12 +1057,6 @@
             
             <a href="/tags/bug/">
                 <span class="chip center-align waves-effect waves-light chip-default">bug</span>
-            </a>
-            
-            
-            
-            <a href="/tags/Data/">
-                <span class="chip center-align waves-effect waves-light chip-default">Data</span>
             </a>
             
             

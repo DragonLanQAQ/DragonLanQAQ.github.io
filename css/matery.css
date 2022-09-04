@@ -2315,6 +2315,26 @@ body.DarkMode img,
 body.DarkMode strong {
   filter: brightness(0.8);
 }
+
+/* 调低图片亮度 */
+.DarkMode img {
+    -webkit-filter: brightness(.7)!important;
+    filter: brightness(.7)!important;
+}
+
+/* 调低图片表格 */
+.DarkMode table{
+    -webkit-filter: brightness(.5)!important;
+    filter: brightness(.5)!important;
+}
+
+
+.DarkMode edgeLabel{
+    background-color: transparent;
+    color: white;
+}
+
+
 /* 统计图滤镜 */
 body.DarkMode #post-calendar,
 body.DarkMode #category-radar,
@@ -2325,7 +2345,7 @@ body.DarkMode #posts-chart {
 }
 /*toc目录滤镜*/
 body.DarkMode .toc-widget{
-  filter: invert(1);
+  filter: invert(0);
 }
 /* Skill bar text color */
 body.DarkMode .skillbar .skill-bar-percent {
@@ -2397,11 +2417,11 @@ body.DarkMode #stars3:after {
 
 
 /* 极简风滚动条 
- ::-webkit-scrollbar{width: 1px;height: 1px;background-color: #d9d9d9;}
+ //::-webkit-scrollbar{width: 1px;height: 1px;background-color: #d9d9d9;}
     /*定义滚动条轨道 内阴影+圆角*/
- ::-webkit-scrollbar-track{-webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0.8);border-radius: 1px;background-color: #d9d9d9;}
+ //::-webkit-scrollbar-track{-webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0.8);border-radius: 1px;background-color: #d9d9d9;}
     /*定义滑块 内阴影+圆角*/
- ::-webkit-scrollbar-thumb{border-radius: 10px;-webkit-box-shadow: inset 0 0 1px rgba(0,0,0,.8);background-color: #666;}
+ //::-webkit-scrollbar-thumb{border-radius: 10px;-webkit-box-shadow: inset 0 0 1px rgba(0,0,0,.8);background-color: #666;}
 */
 
   ::-webkit-scrollbar-track-piece {

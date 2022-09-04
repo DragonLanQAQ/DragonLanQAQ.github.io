@@ -789,7 +789,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"Markdown","value":2},{"name":"blog","value":2},{"name":"java","value":1},{"name":"Java基础","value":2},{"name":"Java","value":4},{"name":"Master Data","value":1},{"name":"bug","value":1},{"name":"full body","value":1},{"name":"Data","value":1},{"name":"RabbitMQ","value":2}],
+                data: [{"name":"Markdown","value":2},{"name":"blog","value":2},{"name":"java","value":1},{"name":"Master Data","value":1},{"name":"Java","value":4},{"name":"Java基础","value":2},{"name":"Data","value":1},{"name":"bug","value":1},{"name":"full body","value":1},{"name":"RabbitMQ","value":2}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -813,7 +813,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["Java","面试","Typora","Markdown","blog","RabbitMQ","java","bit","byte","刷题"]
+                data: ["Java","面试","Typora","Markdown","blog","RabbitMQ","java","Master Data","刷题","bit"]
             }
         ],
         yAxis: [
@@ -1020,14 +1020,8 @@
             
             
             
-            <a href="/tags/bit/">
-                <span class="chip center-align waves-effect waves-light chip-default">bit</span>
-            </a>
-            
-            
-            
-            <a href="/tags/byte/">
-                <span class="chip center-align waves-effect waves-light chip-default">byte</span>
+            <a href="/tags/Master-Data/">
+                <span class="chip center-align waves-effect waves-light chip-default">Master Data</span>
             </a>
             
             
@@ -1046,14 +1040,26 @@
             
             
             
+            <a href="/tags/bit/">
+                <span class="chip center-align waves-effect waves-light chip-default">bit</span>
+            </a>
+            
+            
+            
+            <a href="/tags/byte/">
+                <span class="chip center-align waves-effect waves-light chip-default">byte</span>
+            </a>
+            
+            
+            
             <a href="/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/">
                 <span class="chip center-align waves-effect waves-light chip-default">命令行</span>
             </a>
             
             
             
-            <a href="/tags/Master-Data/">
-                <span class="chip center-align waves-effect waves-light chip-default">Master Data</span>
+            <a href="/tags/Data/">
+                <span class="chip center-align waves-effect waves-light chip-default">Data</span>
             </a>
             
             
@@ -1082,20 +1088,14 @@
             
             
             
-            <a href="/tags/Data/">
-                <span class="chip center-align waves-effect waves-light chip-default">Data</span>
+            <a href="/tags/RabbitMQ/">
+                <span class="chip center-align waves-effect waves-light chip-default">RabbitMQ</span>
             </a>
             
             
             
             <a href="/tags/Spring/">
                 <span class="chip center-align waves-effect waves-light chip-default">Spring</span>
-            </a>
-            
-            
-            
-            <a href="/tags/RabbitMQ/">
-                <span class="chip center-align waves-effect waves-light chip-default">RabbitMQ</span>
             </a>
             
             
@@ -1551,6 +1551,19 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
+<!-- https://cdn.jsdelivr.net/npm/sakana-widget@2.3.0/lib/sakana.min.js -->
+<!-- https://cdnjs.cloudflare.com/ajax/libs/sakana-widget/2.3.0/sakana.min.js -->
+<div id="sakana-widget" style="position:fixed;bottom:85px;right:40px;z-index:99999;opacity:1"></div>
+<script>
+  function initSakanaWidget() {
+    new SakanaWidget().mount('#sakana-widget');
+  }
+</script>
+<script
+  async
+  onload="initSakanaWidget()"
+  src="https://cdn.jsdelivr.net/npm/sakana-widget@2.3.0/lib/sakana.min.js"
+></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/unitychan.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":40,"vOffset":25},"mobile":{"show":true,"scale":0.8},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body>
 
 </html>

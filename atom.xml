@@ -6,7 +6,7 @@
   <link href="https://dragonlanqaq.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://dragonlanqaq.gitee.io/"/>
-  <updated>2022-06-29T13:11:23.610Z</updated>
+  <updated>2022-09-04T13:46:53.444Z</updated>
   <id>https://dragonlanqaq.gitee.io/</id>
   
   <author>
@@ -15,6 +15,48 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo常用命令</title>
+    <link href="https://dragonlanqaq.gitee.io/2022/09/04/bo-ke-xiang-guan/hexo-chang-yong-ming-ling/"/>
+    <id>https://dragonlanqaq.gitee.io/2022/09/04/bo-ke-xiang-guan/hexo-chang-yong-ming-ling/</id>
+    <published>2022-09-04T13:46:26.000Z</published>
+    <updated>2022-09-04T13:46:53.444Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>PicGo图床搭建</title>
+    <link href="https://dragonlanqaq.gitee.io/2022/09/04/bo-ke-xiang-guan/picgo-tu-chuang-da-jian/"/>
+    <id>https://dragonlanqaq.gitee.io/2022/09/04/bo-ke-xiang-guan/picgo-tu-chuang-da-jian/</id>
+    <published>2022-09-04T13:45:40.000Z</published>
+    <updated>2022-09-04T13:50:29.207Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>java/wiki/MongoDB分片集群搭建步骤</title>
@@ -378,11 +420,11 @@
     <category term="Java基础" scheme="https://dragonlanqaq.gitee.io/categories/Java%E5%9F%BA%E7%A1%80/"/>
     
     
+    <category term="Java" scheme="https://dragonlanqaq.gitee.io/tags/Java/"/>
+    
     <category term="bit" scheme="https://dragonlanqaq.gitee.io/tags/bit/"/>
     
     <category term="byte" scheme="https://dragonlanqaq.gitee.io/tags/byte/"/>
-    
-    <category term="Java" scheme="https://dragonlanqaq.gitee.io/tags/Java/"/>
     
   </entry>
   
@@ -433,48 +475,6 @@
     
     
     <category term="Master Data" scheme="https://dragonlanqaq.gitee.io/tags/Master-Data/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>日常/软件安装相关</title>
-    <link href="https://dragonlanqaq.gitee.io/2022/02/20/ri-chang/ruan-jian-an-zhuang-xiang-guan/"/>
-    <id>https://dragonlanqaq.gitee.io/2022/02/20/ri-chang/ruan-jian-an-zhuang-xiang-guan/</id>
-    <published>2022-02-20T01:58:26.229Z</published>
-    <updated>2022-02-20T15:37:16.185Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>日常/租房笔记</title>
-    <link href="https://dragonlanqaq.gitee.io/2022/01/24/ri-chang/zu-fang-bi-ji/"/>
-    <id>https://dragonlanqaq.gitee.io/2022/01/24/ri-chang/zu-fang-bi-ji/</id>
-    <published>2022-01-24T05:55:37.911Z</published>
-    <updated>2022-02-02T13:20:26.992Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
     
   </entry>
   

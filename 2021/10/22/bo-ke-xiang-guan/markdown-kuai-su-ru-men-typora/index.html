@@ -619,21 +619,21 @@ import co">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-11-09
+                    2022-09-04
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    767
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    4 分
                 </div>
                 
 
@@ -829,7 +829,21 @@ A[方形] --> B(圆角)
     F[竖向流程图]</pre>
 
 <p><a href="https://www.runoob.com/markdown/md-advance.html" target="_blank" rel="noopener">流程图源码参考地址</a></p>
-
+<h2 id="13、调整posts分类"><a href="#13、调整posts分类" class="headerlink" title="13、调整posts分类"></a>13、调整posts分类</h2><p>多数博客都有<code>categories</code>和<code>tags</code>两种分类方式:</p>
+<ul>
+<li><p>其中<code>categories</code>往往是互不关联、范围比较广的分类，如生活、学习、工作…在写post之前，最好先确定几个大的分类方向，尽量涵盖所有文章类型；在这基础之上扩展出多个子分类，之后将post对号入座；必要时再增添新的子分类，让博客的分类树不断完善。<br><code>Hexo</code>支持多级子分类，如下列写法：</p>
+<pre class=" language-yml"><code class="language-yml">categories:
+  -  [学习, 语言, 英语   ]
+  -  [工作, 工具 ]
+</code></pre>
+</li>
+</ul>
+<p>​        代表该post同时属于<code>学习</code>和<code>工作</code>两个同级分类，而<code>语言</code>是<code>学习</code>的子分类，<code>英语</code>又是<code>语言</code>的子分类。 注意<strong>英文逗号后必须有一个空格</strong>，而中括号前后的空格则无所谓。</p>
+<ul>
+<li><code>tags</code>则相对随意一些，它是另一个维度的分类，可以比较具体，<code>tag</code>之间也可以有重复的地方。此外，不同于<code>categories</code>常事先就规定好，<code>tags</code>往往是写完post拍一下脑袋当场确定的。</li>
+</ul>
+<p>总的来说<code>tags</code>比较乱、相互之间没有什么顺序，而<code>categories</code>注重层级，结构清晰。</p>
+<h2 id="14、评论端由Valine修改为utterances"><a href="#14、评论端由Valine修改为utterances" class="headerlink" title="14、评论端由Valine修改为utterances"></a>14、评论端由Valine修改为utterances</h2>
                 
             </div>
             <hr/>
@@ -1722,7 +1736,7 @@ A[方形] --> B(圆角)
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">28.6k</span>&nbsp;字
+                class="white-color">29.1k</span>&nbsp;字
             
             
             

@@ -2329,6 +2329,7 @@ body.DarkMode strong {
 }
 
 
+.DarkMode code,
 .DarkMode edgeLabel{
     background-color: transparent;
     color: white;

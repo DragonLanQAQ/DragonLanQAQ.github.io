@@ -31,8 +31,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="斓龙的个人博客" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="斓龙的个人博客" type="application/atom+xml">
+</head>
 
 
 
@@ -241,6 +241,15 @@
         </a>
       </li>
       
+      <li>
+        <a href="/essay">
+          
+          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>随笔</span>
+        </a>
+      </li>
+      
     </ul>
     
   </li>
@@ -388,6 +397,16 @@
                   </a>
                 </li>
               
+                <li>
+
+                  <a href="/essay " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>随笔</span>
+                  </a>
+                </li>
+              
             </ul>
           
         </li>
@@ -522,6 +541,116 @@
 <main class="content">
 
     
+<style>
+    /* 文章分类书本样式 */
+    .chip-container .tag-chips {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .chip-container .tag-chips a {
+        margin: 0 7px 10px;
+    }
+    .chip-container .chip {
+        max-width: calc(100% / 4);
+        min-width: 10em;
+        height: 200px;
+        position: relative;
+        transition: .5s linear;
+        padding: 19px 0;
+        line-height: 20px;
+        z-index: 990;
+        border-radius: 5px 15px 15px 5px;
+        transform-origin: left center 0;
+    }
+    .chip-container .notebook-cover::before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: calc(100% + 2px);
+        top: -1px;
+        z-index: 100;
+        border-radius: 2px;
+        right: 25px;
+        transition: 2s ease;
+        /* background: linear-gradient(to right,#9c2e2b 0,#cc4b48 12%,#9c2e2b 25%,#cc4b48 37%,#9c2e2b 50%,#cc4b48 62%,#9c2e2b 75%,#cc4b48 87%,#9c2e2b 100%); */
+        background: linear-gradient(to right,#1e606e 0,#2e95aa 12%,#1e606e 25%,#2e95aa 37%,#1e606e 50%,#2e95aa 62%,#1e606e 75%,#2e95aa 87%,#1e606e 100%);
+    }
+
+    .chip .notebook-skin {
+        height: 50px;
+        width: 100%;
+        background: #e8e8e0;
+        margin-top: 42px;
+        padding: 10px 32px 64px 10px;
+        font-size: 19px;
+        position: relative;
+        z-index: 10;
+        color: #222;
+        text-align: left;
+        box-shadow: 0 1px 1px rgba(0,0,0,.2);
+    }
+    .chip .notebook-skin:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 15px;
+        left: 0;
+        bottom: 0;
+        background: #cddc39;
+    }
+    .notebook-cover {
+        background: #cc4b48;
+        height: 200px;
+        width: 140px;
+        position: absolute;
+        border-radius: 5px 15px 15px 5px;
+        z-index: 10;
+        transition: .5s linear;
+        transform-style: preserve-3d;
+        transform-origin: left center 0;
+    }
+
+    .moleskine-wrapper {
+        max-width: calc(100% / 4);
+        min-width: 10em;
+    }
+    .moleskine-notebook:hover .notebook-cover {
+        transform: rotateY(-50deg);
+        z-index: 99;
+        box-shadow: 20px 10px 50px rgba(0,0,0,.2);
+    }
+    .moleskine-notebook {
+        height: 200px;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        transition: .5s linear;
+        border-radius: 5px 15px 15px 5px;
+        transform-origin: left center 0;
+    }
+    .moleskine-notebook:hover {
+        transform: rotateZ(-10deg);
+    }
+    .notebook-page.dotted {
+        background: linear-gradient(to bottom,#fbfae8 9px,#e4e4e4 1px);
+        background-size: 100% 10px;
+    }
+    .chip-container .chip:hover {
+        background: none;
+    }
+    .notebook-page {
+        height: 100%;
+        width: 140px;
+        position: absolute;
+        top: 10px;
+        background-color: #fbfae8;
+        z-index: 0;
+        border-radius: 5px 16px 16px 5px;
+        overflow: hidden;
+    }
+    </style>
 
 <div id="category-cloud" class="container chip-container">
     <div class="card">
@@ -533,93 +662,37 @@
                 
                 
                 
-                <a href="/categories/Markdown/" title="Markdown: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F9EBEA;">Markdown
-                        <span class="tag-length">2</span>
-                    </span>
+                <a href="/categories/Markdown/" title="Markdown: 1">
+				  <div class="moleskine-wrapper">
+					  <div class="moleskine-notebook">
+						  <div class="chip notebook-cover center-align waves-effect waves-light
+						   chip-default "
+								  style="background-color: #F9EBEA;">                                               
+							  <div class="notebook-skin
+								   chip-default "
+								  >Markdown                                  
+							  </div>
+						  </div>
+						  <div class="notebook-page dotted"></div>
+					  </div>
+				  </div>
                 </a>
                 
                 
-                <a href="/categories/java/" title="java: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F5EEF8;">java
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/Java%E5%9F%BA%E7%A1%80/" title="Java基础: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #D5F5E3;">Java基础
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/Java/" title="Java: 4">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #E8F8F5;">Java
-                        <span class="tag-length">4</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/Master-Data/" title="Master Data: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #FEF9E7;">Master Data
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/bug/" title="bug: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F8F9F9;">bug
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/Data/" title="Data: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #82E0AA;">Data
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/full-body/" title="full body: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #D7BDE2;">full body
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/blog/" title="blog: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #A3E4D7;">blog
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/RabbitMQ/" title="RabbitMQ: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #85C1E9;">RabbitMQ
-                        <span class="tag-length">2</span>
-                    </span>
+                <a href="/categories/%E9%9A%8F%E7%AC%94/" title="随笔: 1">
+				  <div class="moleskine-wrapper">
+					  <div class="moleskine-notebook">
+						  <div class="chip notebook-cover center-align waves-effect waves-light
+						   chip-default "
+								  style="background-color: #F5EEF8;">                                               
+							  <div class="notebook-skin
+								   chip-default "
+								  >随笔                                  
+							  </div>
+						  </div>
+						  <div class="notebook-page dotted"></div>
+					  </div>
+				  </div>
                 </a>
                 
                 
@@ -665,7 +738,7 @@
                     color: '#3C4858'
                 }
             },
-            indicator: [{"name":"Markdown","max":5},{"name":"java","max":5},{"name":"Java基础","max":5},{"name":"Java","max":5},{"name":"Master Data","max":5},{"name":"bug","max":5},{"name":"Data","max":5},{"name":"full body","max":5},{"name":"blog","max":5},{"name":"RabbitMQ","max":5}],
+            indicator: [{"name":"Markdown","max":2},{"name":"随笔","max":2}],
             nameGap: 5,
             center: ['50%','55%'],
             radius: '66%'
@@ -676,7 +749,7 @@
             itemStyle: {normal: {areaStyle: {type: 'default'}}},
             data : [
                 {
-                    value : [2,1,2,4,1,1,1,1,2,2],
+                    value : [1,1],
                     name : '文章分类数量'
                 }
             ]
@@ -747,7 +820,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">29.1k</span>&nbsp;字
+                class="white-color">29.6k</span>&nbsp;字
             
             
             

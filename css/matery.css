@@ -2354,7 +2354,9 @@ body.DarkMode strong {
     background-color: transparent;
 }
 
-.DarkMode .card{
+.DarkMode .card,
+.DarkMode .notice,
+.DarkMode .noticess{
     background: transparent;
 }
 

@@ -1303,6 +1303,7 @@ thead {
     color: #3C4858;
     font-size: 1.75rem;
     font-weight: 400;
+    font-family: 'Architects Daughter', cursive!important;
 }
 
 .chip-container .tag-chips {
@@ -2473,3 +2474,150 @@ body.DarkMode #stars3:after {
         background-color: #878987;
         -webkit-border-radius: 6px
     }
+
+
+/* 新增样式 */
+.bozhushuo,
+.friends-container .tag-title,
+.my-gallery .title,
+.miaoshus .title,
+.chip .notebook-skin,
+.bg-cover .description,
+.frind-ship .title h1,
+.frind-ship .title p,
+.post-statis .statis
+{
+    font-family: 'Architects Daughter', cursive!important;
+}
+
+body.dark .notice {
+    background: 0 0;
+    border: 1px dashed #888;
+}
+.notice {
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px dashed #e6e6e6;
+    color: #969696;
+    position: relative;
+    display: inline-block;
+    width: 95%;
+    background: #fbfbfb50;
+    border-radius: 10px;
+    font-size: 17.5px;
+}
+.notice-content {
+    display: initial;
+    vertical-align: middle;
+}
+.triangle {
+    background-color: rgba(255, 255, 255, 0.5)!important;
+    box-shadow: -12px -17px 38px rgba(0,0,0,.1), 7px 18px 25px rgba(0,0,0,.08)!important;
+    -webkit-box-shadow: -12px -17px 38px rgba(0,0,0,.1), 7px 18px 25px rgba(0,0,0,.08)!important;
+    border-radius: 8px;
+}
+/* 文章分类书本样式 */
+.fudaixian, 
+.caishenxian,
+.guguxian,
+.shengdanxian
+ {
+    z-index: 99;
+}
+body.dark .bigphonetree {
+    background-color: #000;
+}
+.bigphonetree {
+    background-color: #fff;
+}
+body.dark .v[data-class=v] .vcards {
+    background: rgba(34,34,34,0.55)!important;
+    margin-top: 10px;
+}
+body.dark #artDetail .v[data-class=v] .vcards {
+    background: none!important;
+}
+/* 小花花背景图开始 */
+.card
+{
+	background: url(/medias/banner/flowerbg-white.png) top;
+}
+body.dark .card
+{
+	background: url(/medias/banner/flowerbg-black.png) top;
+}
+/* 小花花背景图结束 */
+.tag-chips a {
+	display: none;
+}
+.tag-chips a[title="随笔"] {
+	display: block;
+}
+@media only screen and (max-width: 601px) {
+	#switchspring {
+		bottom: 178px!important;
+	}
+}
+#switchchristmas {
+	bottom: 258px!important;
+}
+@media only screen and (max-width: 601px) {
+	#switchchristmas {
+		bottom: 235px!important;
+	}
+}
+#sma {
+	bottom: 150px;
+}
+.bg-cover {
+	/* background-image: url("/medias/banner/contactbg.jpg")!important; */
+	/*background-position-y: -82vh;*/
+}
+.bg-cover::before {
+	background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/grid.png);
+}
+.brand .title {
+	color: #1d1d1d!important;
+	font-family: 'Architects Daughter', cursive!important;
+}
+@media only screen and (max-width: 600px) {
+	.about-cover {
+		height: 64vh;
+	}
+	.bg-cover {
+	background-position-y: 0;
+	}
+}
+@media only screen and (max-width: 1090px) {
+	.bg-cover {
+	background-position-y: 0;
+	}
+}
+
+/* 旋转小樱花按钮 */
+body.dark .yinghua {
+  filter: brightness(.7);
+}
+body.themespring .yinghua, body.themechris .yinghua {
+  display: none;
+}
+
+/* 文章卡片hover线条效果 */
+.titlesline {
+  width: 0px;
+  height: 4px;
+  background-color: #f2eb00;
+  border-radius: 2px;
+  position: absolute;
+  top: 10px;
+  left: 24px;
+}
+body.dark .titlesline {
+  filter: brightness(.7);
+}
+article .card .titlesline {
+  transition: all 0.36s ease;
+}
+article .card-image:hover .titlesline {
+  width: 36px;
+}

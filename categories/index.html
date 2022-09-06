@@ -542,6 +542,59 @@
 
     
 <style>
+	.bg-cover {
+        height: 44vh;
+    }
+    #sma {
+        bottom: 155px;
+    }
+    #switchchristmas {
+        bottom: 256px!important;
+    }
+    @media only screen and (max-width: 601px) {
+        #switchchristmas {
+            bottom: 279px!important;
+        }
+    }
+    //.bg-cover {
+    //    background-image: url("/medias/banner/catebg.jpg")!important;
+    //}
+    .bg-cover::before {
+        background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/grid.png);
+    }
+    #articles {
+      margin-top: 16px;
+    }
+    @media only screen and (max-width: 1100px) {
+      .noticess {
+        width: 90%!important;
+      }
+    }
+    .noticess {
+      width: 73%;
+      margin-bottom: 0px;
+      margin-top: 20px;
+      background: url(/medias/banner/flowerbg-white.png);
+    }
+    .noticess .notice-content {
+      font-size: 16px;
+    }
+    .notice #catename {
+      color: #f2eb00;
+      letter-spacing: 4px;
+      padding-bottom: 4px;
+      border-bottom: 1.2px dashed #f2eb00;
+      font-size: 20px;
+      font-weight: 500;
+    }
+    .notice .jiluwords {
+      color: #49b1f5;
+      letter-spacing: 4px;
+      padding-bottom: 4px;
+      border-bottom: 1.2px dashed #49b1f5;
+      font-size: 20px;
+      font-weight: 500;
+    }
     /* 文章分类书本样式 */
     .chip-container .tag-chips {
         display: flex;
@@ -650,57 +703,28 @@
         border-radius: 5px 16px 16px 5px;
         overflow: hidden;
     }
-    </style>
-
-<div id="category-cloud" class="container chip-container">
-    <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章分类
-            </div>
-            <div class="tag-chips">
-                
-                
-                
-                <a href="/categories/Markdown/" title="Markdown: 1">
-				  <div class="moleskine-wrapper">
-					  <div class="moleskine-notebook">
-						  <div class="chip notebook-cover center-align waves-effect waves-light
-						   chip-default "
-								  style="background-color: #F9EBEA;">                                               
-							  <div class="notebook-skin
-								   chip-default "
-								  >Markdown                                  
-							  </div>
-						  </div>
-						  <div class="notebook-page dotted"></div>
-					  </div>
-				  </div>
-                </a>
-                
-                
-                <a href="/categories/%E9%9A%8F%E7%AC%94/" title="随笔: 1">
-				  <div class="moleskine-wrapper">
-					  <div class="moleskine-notebook">
-						  <div class="chip notebook-cover center-align waves-effect waves-light
-						   chip-default "
-								  style="background-color: #F5EEF8;">                                               
-							  <div class="notebook-skin
-								   chip-default "
-								  >随笔                                  
-							  </div>
-						  </div>
-						  <div class="notebook-page dotted"></div>
-					  </div>
-				  </div>
-                </a>
-                
-                
-            </div>
-        </div>
-    </div>
+</style>
+<script>
+$(function () {
+	var nowUrl = window.location.href;
+	var catenameTab = $('#catename')[0];
+	if(nowUrl.indexOf("%E9%9A%8F%E7%AC%94") >= 0) { 
+	  //随笔是%E9%9A%8F%E7%AC%94
+	  catenameTab.innerHTML = "随笔";
+	} else if (nowUrl.indexOf("%E6%8A%80%E6%9C%AF") >= 0) {
+	  //技术是%E6%8A%80%E6%9C%AF
+	  catenameTab.innerHTML = "技术";
+	}
+})
+</script>
+<div class="center-align">
+  <div class="notice noticess">
+	<div class="notice-content">
+	  这里是博主的 <span id="catename"></span>分类，
+	  日子过得好快，还好我都 <span class="jiluwords">记录</span>下来了。
+	</div>
+  </div>
 </div>
-
 
     
     <style type="text/css">

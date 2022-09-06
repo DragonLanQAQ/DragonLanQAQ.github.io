@@ -2328,6 +2328,32 @@ body.DarkMode strong {
     filter: brightness(.5)!important;
 }
 
+/* 随笔字体颜色 */
+.DarkMode .ipage{
+    color: #7F95D1;
+    text-shadow: none;
+    background-color: transparent;
+}
+
+.DarkMode .ipage p{
+    color: rgba(255, 255, 255, 0.6);
+    text-shadow: none;
+    background-color: transparent;
+}
+
+/* 随笔背景颜色 */
+.DarkMode .izhengwen{
+    color: #7F95D1;
+    background: repeating-linear-gradient(to bottom, #282C3A, #282C3A 31px, #6BA2E1 1px, #F9F9AF);
+   /*  background: repeating-linear-gradient(to bottom, #282C3A, #282C3A 31px, #6BA2D8 1px, #f9f9f9); */
+    background-size: 100% 32px;
+}
+
+.DarkMode .izhengwen p:nth-child(odd):before {
+    background-color: transparent;
+}
+
+
 
 .DarkMode code,
 .DarkMode edgeLabel{

@@ -2354,7 +2354,9 @@ body.DarkMode strong {
     background-color: transparent;
 }
 
-
+.DarkMode .card{
+    background: transparent;
+}
 
 .DarkMode code,
 .DarkMode edgeLabel{

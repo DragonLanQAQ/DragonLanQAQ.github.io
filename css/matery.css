@@ -2581,7 +2581,7 @@ body.dark .card
 	background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/grid.png);
 }
 .brand .title {
-	color: #1d1d1d!important;
+	color: #1d1d1d;
 	font-family: 'Architects Daughter', cursive!important;
 }
 @media only screen and (max-width: 600px) {

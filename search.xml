@@ -4,6 +4,57 @@
   
     
     <entry>
+      <title>我的世界java版基岩版互通教程</title>
+      <link href="/2022/09/10/you-xi/minecraft/wo-de-shi-jie-java-ban-ji-yan-ban-hu-tong-jiao-cheng/"/>
+      <url>/2022/09/10/you-xi/minecraft/wo-de-shi-jie-java-ban-ji-yan-ban-hu-tong-jiao-cheng/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="我的世界java版基岩版互通教程"><a href="#我的世界java版基岩版互通教程" class="headerlink" title="我的世界java版基岩版互通教程"></a>我的世界java版基岩版互通教程</h1><h2 id="1、Geyser插件下载"><a href="#1、Geyser插件下载" class="headerlink" title="1、Geyser插件下载"></a>1、Geyser插件下载</h2><p>官网：<a href="https://geysermc.org/" target="_blank" rel="noopener">Geyser</a></p><p>java -Xmx2048M -Xms2048M -jar fabric-server-launch.jar  nogui</p><p>Geyser.jar</p><p>java -jar Geyser.jar</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>游戏/Minecraft/我的世界开服教程-阿里云服务器</title>
+      <link href="/2022/09/10/you-xi/minecraft/wo-de-shi-jie-kai-fu-jiao-cheng-a-li-yun-fu-wu-qi/"/>
+      <url>/2022/09/10/you-xi/minecraft/wo-de-shi-jie-kai-fu-jiao-cheng-a-li-yun-fu-wu-qi/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>title: 我的世界开服教程-Fabric端<br>hide: true</p><h1 id="我的世界开服教程-Fabric端"><a href="#我的世界开服教程-Fabric端" class="headerlink" title="我的世界开服教程-Fabric端"></a>我的世界开服教程-Fabric端</h1><h2 id="1、安装准备"><a href="#1、安装准备" class="headerlink" title="1、安装准备"></a>1、安装准备</h2><p>进入Fabric官网下载服务端下载器：</p><p><a href="https://fabricmc.net/use/server/" target="_blank" rel="noopener">https://fabricmc.net/use/server/</a></p><p>下载器：</p><p><img src="https://cdn.staticaly.com/gh/DragonLanQAQ/blog-img-cdn@main/img/Fabric%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%AE%89%E8%A3%85.png"></p><p>服务端安装玩抽</p><p><img src="https://cdn.staticaly.com/gh/DragonLanQAQ/blog-img-cdn@main/img/Fabric%E4%B8%8B%E8%BD%BD%E6%9C%8D%E5%8A%A1%E7%AB%AF.png"></p><p>java -Xmx2048M -Xms2048M -jar fabric-server-launch.jar  nogui</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>服务器域名</title>
+      <link href="/2022/09/10/sui-bi/fu-wu-qi-yu-ming/"/>
+      <url>/2022/09/10/sui-bi/fu-wu-qi-yu-ming/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>这是博主的随笔板块，后续会更新文章，目前弄好了模板格式~</p><div class="ipage">    <div class="ititle">关于我使用gitee搭建的博客</div>    <div class="izhengwen">        <p>本来想趁着搭建MC服务器的同时把博客域名也一起替换掉，可找了半天没在gitee上找到能进行替换的地方。百度了下才知道这功能是要付费才能使用，看来之后还是得把博客给转移到github上去，不然域名买了都没怎么使用过。看来这个网站也就到此为止了吧</p>        <p>如果感兴趣可以去我的新博客↓</p>    </div></div><p><a href="www.dragon.top">斓龙的博客</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>斯普拉遁</title>
       <link href="/2022/09/06/sui-bi/pen-she-zhan-shi/"/>
       <url>/2022/09/06/sui-bi/pen-she-zhan-shi/</url>

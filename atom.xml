@@ -3,11 +3,11 @@
   <title>斓龙的个人博客</title>
   
   <subtitle>相信的心就是你的魔法</subtitle>
-  <link href="https://dragonlanqaq.gitee.io/atom.xml" rel="self"/>
+  <link href="https://dragonlanqaq.github.io/atom.xml" rel="self"/>
   
-  <link href="https://dragonlanqaq.gitee.io/"/>
+  <link href="https://dragonlanqaq.github.io/"/>
   <updated>2022-09-10T16:23:29.825Z</updated>
-  <id>https://dragonlanqaq.gitee.io/</id>
+  <id>https://dragonlanqaq.github.io/</id>
   
   <author>
     <name>斓龙</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>我的世界java版基岩版互通教程</title>
-    <link href="https://dragonlanqaq.gitee.io/2022/09/10/you-xi/minecraft/wo-de-shi-jie-java-ban-ji-yan-ban-hu-tong-jiao-cheng/"/>
-    <id>https://dragonlanqaq.gitee.io/2022/09/10/you-xi/minecraft/wo-de-shi-jie-java-ban-ji-yan-ban-hu-tong-jiao-cheng/</id>
+    <link href="https://dragonlanqaq.github.io/2022/09/10/you-xi/minecraft/wo-de-shi-jie-java-ban-ji-yan-ban-hu-tong-jiao-cheng/"/>
+    <id>https://dragonlanqaq.github.io/2022/09/10/you-xi/minecraft/wo-de-shi-jie-java-ban-ji-yan-ban-hu-tong-jiao-cheng/</id>
     <published>2022-09-10T11:03:43.022Z</published>
     <updated>2022-09-10T16:23:29.825Z</updated>
     
@@ -39,8 +39,8 @@
   
   <entry>
     <title>游戏/Minecraft/我的世界开服教程-阿里云服务器</title>
-    <link href="https://dragonlanqaq.gitee.io/2022/09/10/you-xi/minecraft/wo-de-shi-jie-kai-fu-jiao-cheng-a-li-yun-fu-wu-qi/"/>
-    <id>https://dragonlanqaq.gitee.io/2022/09/10/you-xi/minecraft/wo-de-shi-jie-kai-fu-jiao-cheng-a-li-yun-fu-wu-qi/</id>
+    <link href="https://dragonlanqaq.github.io/2022/09/10/you-xi/minecraft/wo-de-shi-jie-kai-fu-jiao-cheng-a-li-yun-fu-wu-qi/"/>
+    <id>https://dragonlanqaq.github.io/2022/09/10/you-xi/minecraft/wo-de-shi-jie-kai-fu-jiao-cheng-a-li-yun-fu-wu-qi/</id>
     <published>2022-09-10T03:49:42.856Z</published>
     <updated>2022-09-10T16:23:34.640Z</updated>
     
@@ -60,8 +60,8 @@
   
   <entry>
     <title>服务器域名</title>
-    <link href="https://dragonlanqaq.gitee.io/2022/09/10/sui-bi/fu-wu-qi-yu-ming/"/>
-    <id>https://dragonlanqaq.gitee.io/2022/09/10/sui-bi/fu-wu-qi-yu-ming/</id>
+    <link href="https://dragonlanqaq.github.io/2022/09/10/sui-bi/fu-wu-qi-yu-ming/"/>
+    <id>https://dragonlanqaq.github.io/2022/09/10/sui-bi/fu-wu-qi-yu-ming/</id>
     <published>2022-09-10T02:00:00.000Z</published>
     <updated>2022-09-10T16:28:43.217Z</updated>
     
@@ -76,17 +76,17 @@
     
     
     
-    <category term="随笔" scheme="https://dragonlanqaq.gitee.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    <category term="随笔" scheme="https://dragonlanqaq.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-    <category term="随笔" scheme="https://dragonlanqaq.gitee.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    <category term="随笔" scheme="https://dragonlanqaq.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
   <entry>
     <title>斯普拉遁</title>
-    <link href="https://dragonlanqaq.gitee.io/2022/09/06/sui-bi/pen-she-zhan-shi/"/>
-    <id>https://dragonlanqaq.gitee.io/2022/09/06/sui-bi/pen-she-zhan-shi/</id>
+    <link href="https://dragonlanqaq.github.io/2022/09/06/sui-bi/pen-she-zhan-shi/"/>
+    <id>https://dragonlanqaq.github.io/2022/09/06/sui-bi/pen-she-zhan-shi/</id>
     <published>2022-09-06T15:00:00.000Z</published>
     <updated>2022-09-08T16:18:17.053Z</updated>
     
@@ -101,23 +101,23 @@
     
     
     
-    <category term="随笔" scheme="https://dragonlanqaq.gitee.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    <category term="随笔" scheme="https://dragonlanqaq.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-    <category term="随笔" scheme="https://dragonlanqaq.gitee.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    <category term="随笔" scheme="https://dragonlanqaq.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
-    <category term="游戏" scheme="https://dragonlanqaq.gitee.io/tags/%E6%B8%B8%E6%88%8F/"/>
+    <category term="游戏" scheme="https://dragonlanqaq.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
     
-    <category term="switch" scheme="https://dragonlanqaq.gitee.io/tags/switch/"/>
+    <category term="switch" scheme="https://dragonlanqaq.github.io/tags/switch/"/>
     
-    <category term="斯普拉遁" scheme="https://dragonlanqaq.gitee.io/tags/%E6%96%AF%E6%99%AE%E6%8B%89%E9%81%81/"/>
+    <category term="斯普拉遁" scheme="https://dragonlanqaq.github.io/tags/%E6%96%AF%E6%99%AE%E6%8B%89%E9%81%81/"/>
     
   </entry>
   
   <entry>
     <title>月饼</title>
-    <link href="https://dragonlanqaq.gitee.io/2022/09/06/sui-bi/yue-bing/"/>
-    <id>https://dragonlanqaq.gitee.io/2022/09/06/sui-bi/yue-bing/</id>
+    <link href="https://dragonlanqaq.github.io/2022/09/06/sui-bi/yue-bing/"/>
+    <id>https://dragonlanqaq.github.io/2022/09/06/sui-bi/yue-bing/</id>
     <published>2022-09-06T15:00:00.000Z</published>
     <updated>2022-09-06T15:49:17.518Z</updated>
     
@@ -132,17 +132,17 @@
     
     
     
-    <category term="随笔" scheme="https://dragonlanqaq.gitee.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    <category term="随笔" scheme="https://dragonlanqaq.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-    <category term="随笔" scheme="https://dragonlanqaq.gitee.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    <category term="随笔" scheme="https://dragonlanqaq.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
   <entry>
     <title>排序</title>
-    <link href="https://dragonlanqaq.gitee.io/2022/09/06/java/pai-xu/"/>
-    <id>https://dragonlanqaq.gitee.io/2022/09/06/java/pai-xu/</id>
+    <link href="https://dragonlanqaq.github.io/2022/09/06/java/pai-xu/"/>
+    <id>https://dragonlanqaq.github.io/2022/09/06/java/pai-xu/</id>
     <published>2022-09-05T16:03:43.713Z</published>
     <updated>2022-09-05T16:07:55.251Z</updated>
     
@@ -162,8 +162,8 @@
   
   <entry>
     <title>命令行的相关操作</title>
-    <link href="https://dragonlanqaq.gitee.io/2022/09/06/java/ming-ling-xing-de-xiang-guan-cao-zuo/"/>
-    <id>https://dragonlanqaq.gitee.io/2022/09/06/java/ming-ling-xing-de-xiang-guan-cao-zuo/</id>
+    <link href="https://dragonlanqaq.github.io/2022/09/06/java/ming-ling-xing-de-xiang-guan-cao-zuo/"/>
+    <id>https://dragonlanqaq.github.io/2022/09/06/java/ming-ling-xing-de-xiang-guan-cao-zuo/</id>
     <published>2022-09-05T16:03:43.711Z</published>
     <updated>2022-09-05T16:08:15.512Z</updated>
     
@@ -183,8 +183,8 @@
   
   <entry>
     <title>什么是冷热数据</title>
-    <link href="https://dragonlanqaq.gitee.io/2022/09/06/java/leng-re-shu-ju/"/>
-    <id>https://dragonlanqaq.gitee.io/2022/09/06/java/leng-re-shu-ju/</id>
+    <link href="https://dragonlanqaq.github.io/2022/09/06/java/leng-re-shu-ju/"/>
+    <id>https://dragonlanqaq.github.io/2022/09/06/java/leng-re-shu-ju/</id>
     <published>2022-09-05T16:03:43.709Z</published>
     <updated>2022-09-05T16:08:23.815Z</updated>
     
@@ -204,8 +204,8 @@
   
   <entry>
     <title>MongoDB分片集群搭建步骤</title>
-    <link href="https://dragonlanqaq.gitee.io/2022/09/06/java/mongodb-fen-pian-ji-qun-da-jian-bu-zou/"/>
-    <id>https://dragonlanqaq.gitee.io/2022/09/06/java/mongodb-fen-pian-ji-qun-da-jian-bu-zou/</id>
+    <link href="https://dragonlanqaq.github.io/2022/09/06/java/mongodb-fen-pian-ji-qun-da-jian-bu-zou/"/>
+    <id>https://dragonlanqaq.github.io/2022/09/06/java/mongodb-fen-pian-ji-qun-da-jian-bu-zou/</id>
     <published>2022-09-05T16:03:43.707Z</published>
     <updated>2022-09-05T16:06:51.821Z</updated>
     
@@ -225,8 +225,8 @@
   
   <entry>
     <title>MongoDB安装</title>
-    <link href="https://dragonlanqaq.gitee.io/2022/09/06/java/mongodb-an-zhuang/"/>
-    <id>https://dragonlanqaq.gitee.io/2022/09/06/java/mongodb-an-zhuang/</id>
+    <link href="https://dragonlanqaq.github.io/2022/09/06/java/mongodb-an-zhuang/"/>
+    <id>https://dragonlanqaq.github.io/2022/09/06/java/mongodb-an-zhuang/</id>
     <published>2022-09-05T16:03:43.706Z</published>
     <updated>2022-09-05T16:06:38.010Z</updated>
     
@@ -246,8 +246,8 @@
   
   <entry>
     <title>kafka消费者端多线程消费的实现方案</title>
-    <link href="https://dragonlanqaq.gitee.io/2022/09/06/java/kafka-xiao-fei-zhe-duan-duo-xian-cheng-xiao-fei-de-shi-xian-fang-an/"/>
-    <id>https://dragonlanqaq.gitee.io/2022/09/06/java/kafka-xiao-fei-zhe-duan-duo-xian-cheng-xiao-fei-de-shi-xian-fang-an/</id>
+    <link href="https://dragonlanqaq.github.io/2022/09/06/java/kafka-xiao-fei-zhe-duan-duo-xian-cheng-xiao-fei-de-shi-xian-fang-an/"/>
+    <id>https://dragonlanqaq.github.io/2022/09/06/java/kafka-xiao-fei-zhe-duan-duo-xian-cheng-xiao-fei-de-shi-xian-fang-an/</id>
     <published>2022-09-05T16:03:43.704Z</published>
     <updated>2022-09-05T16:06:34.517Z</updated>
     
@@ -267,8 +267,8 @@
   
   <entry>
     <title>Kafka</title>
-    <link href="https://dragonlanqaq.gitee.io/2022/09/06/java/kafka/"/>
-    <id>https://dragonlanqaq.gitee.io/2022/09/06/java/kafka/</id>
+    <link href="https://dragonlanqaq.github.io/2022/09/06/java/kafka/"/>
+    <id>https://dragonlanqaq.github.io/2022/09/06/java/kafka/</id>
     <published>2022-09-05T16:03:43.703Z</published>
     <updated>2022-09-05T16:06:14.097Z</updated>
     
@@ -288,8 +288,8 @@
   
   <entry>
     <title>Git基础操作</title>
-    <link href="https://dragonlanqaq.gitee.io/2022/09/06/java/git-ji-chu-cao-zuo/"/>
-    <id>https://dragonlanqaq.gitee.io/2022/09/06/java/git-ji-chu-cao-zuo/</id>
+    <link href="https://dragonlanqaq.github.io/2022/09/06/java/git-ji-chu-cao-zuo/"/>
+    <id>https://dragonlanqaq.github.io/2022/09/06/java/git-ji-chu-cao-zuo/</id>
     <published>2022-09-05T16:03:43.701Z</published>
     <updated>2022-09-05T16:07:21.800Z</updated>
     
@@ -309,8 +309,8 @@
   
   <entry>
     <title>这是随笔文章模板</title>
-    <link href="https://dragonlanqaq.gitee.io/2022/09/05/sui-bi/sui-bi-wen-zhang-mo-ban/"/>
-    <id>https://dragonlanqaq.gitee.io/2022/09/05/sui-bi/sui-bi-wen-zhang-mo-ban/</id>
+    <link href="https://dragonlanqaq.github.io/2022/09/05/sui-bi/sui-bi-wen-zhang-mo-ban/"/>
+    <id>https://dragonlanqaq.github.io/2022/09/05/sui-bi/sui-bi-wen-zhang-mo-ban/</id>
     <published>2022-09-05T15:00:00.000Z</published>
     <updated>2022-09-06T15:38:18.569Z</updated>
     
@@ -325,17 +325,17 @@
     
     
     
-    <category term="随笔" scheme="https://dragonlanqaq.gitee.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    <category term="随笔" scheme="https://dragonlanqaq.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-    <category term="随笔" scheme="https://dragonlanqaq.gitee.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    <category term="随笔" scheme="https://dragonlanqaq.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
   <entry>
     <title>Java8 在map中使用stream</title>
-    <link href="https://dragonlanqaq.gitee.io/2022/09/05/java/java8/java-8-zai-map-zhong-shi-yong-stream/"/>
-    <id>https://dragonlanqaq.gitee.io/2022/09/05/java/java8/java-8-zai-map-zhong-shi-yong-stream/</id>
+    <link href="https://dragonlanqaq.github.io/2022/09/05/java/java8/java-8-zai-map-zhong-shi-yong-stream/"/>
+    <id>https://dragonlanqaq.github.io/2022/09/05/java/java8/java-8-zai-map-zhong-shi-yong-stream/</id>
     <published>2022-09-05T12:00:00.000Z</published>
     <updated>2022-09-05T16:04:30.528Z</updated>
     
@@ -351,18 +351,18 @@
     
     
     
-    <category term="Stream" scheme="https://dragonlanqaq.gitee.io/tags/Stream/"/>
+    <category term="Stream" scheme="https://dragonlanqaq.github.io/tags/Stream/"/>
     
-    <category term="Java8" scheme="https://dragonlanqaq.gitee.io/tags/Java8/"/>
+    <category term="Java8" scheme="https://dragonlanqaq.github.io/tags/Java8/"/>
     
-    <category term="Map" scheme="https://dragonlanqaq.gitee.io/tags/Map/"/>
+    <category term="Map" scheme="https://dragonlanqaq.github.io/tags/Map/"/>
     
   </entry>
   
   <entry>
     <title>hexo常用命令</title>
-    <link href="https://dragonlanqaq.gitee.io/2022/09/04/bo-ke-xiang-guan/hexo-chang-yong-ming-ling/"/>
-    <id>https://dragonlanqaq.gitee.io/2022/09/04/bo-ke-xiang-guan/hexo-chang-yong-ming-ling/</id>
+    <link href="https://dragonlanqaq.github.io/2022/09/04/bo-ke-xiang-guan/hexo-chang-yong-ming-ling/"/>
+    <id>https://dragonlanqaq.github.io/2022/09/04/bo-ke-xiang-guan/hexo-chang-yong-ming-ling/</id>
     <published>2022-09-04T13:46:26.000Z</published>
     <updated>2022-09-04T13:46:53.444Z</updated>
     
@@ -382,8 +382,8 @@
   
   <entry>
     <title>PicGo图床搭建</title>
-    <link href="https://dragonlanqaq.gitee.io/2022/09/04/bo-ke-xiang-guan/picgo-tu-chuang-da-jian/"/>
-    <id>https://dragonlanqaq.gitee.io/2022/09/04/bo-ke-xiang-guan/picgo-tu-chuang-da-jian/</id>
+    <link href="https://dragonlanqaq.github.io/2022/09/04/bo-ke-xiang-guan/picgo-tu-chuang-da-jian/"/>
+    <id>https://dragonlanqaq.github.io/2022/09/04/bo-ke-xiang-guan/picgo-tu-chuang-da-jian/</id>
     <published>2022-09-04T13:45:40.000Z</published>
     <updated>2022-09-04T13:50:29.207Z</updated>
     
@@ -403,8 +403,8 @@
   
   <entry>
     <title>全身追踪设置(tundra tracker)</title>
-    <link href="https://dragonlanqaq.gitee.io/2022/05/20/you-xi/quan-shen-zhui-zong-she-zhi-tundra-tracker-pian/"/>
-    <id>https://dragonlanqaq.gitee.io/2022/05/20/you-xi/quan-shen-zhui-zong-she-zhi-tundra-tracker-pian/</id>
+    <link href="https://dragonlanqaq.github.io/2022/05/20/you-xi/quan-shen-zhui-zong-she-zhi-tundra-tracker-pian/"/>
+    <id>https://dragonlanqaq.github.io/2022/05/20/you-xi/quan-shen-zhui-zong-she-zhi-tundra-tracker-pian/</id>
     <published>2022-05-19T16:00:00.000Z</published>
     <updated>2022-09-05T16:02:02.119Z</updated>
     
@@ -420,18 +420,18 @@
     
     
     
-    <category term="VR" scheme="https://dragonlanqaq.gitee.io/tags/VR/"/>
+    <category term="VR" scheme="https://dragonlanqaq.github.io/tags/VR/"/>
     
-    <category term="full body" scheme="https://dragonlanqaq.gitee.io/tags/full-body/"/>
+    <category term="full body" scheme="https://dragonlanqaq.github.io/tags/full-body/"/>
     
-    <category term="game" scheme="https://dragonlanqaq.gitee.io/tags/game/"/>
+    <category term="game" scheme="https://dragonlanqaq.github.io/tags/game/"/>
     
   </entry>
   
   <entry>
     <title>日常/料理</title>
-    <link href="https://dragonlanqaq.gitee.io/2022/05/15/ri-chang/liao-li/"/>
-    <id>https://dragonlanqaq.gitee.io/2022/05/15/ri-chang/liao-li/</id>
+    <link href="https://dragonlanqaq.github.io/2022/05/15/ri-chang/liao-li/"/>
+    <id>https://dragonlanqaq.github.io/2022/05/15/ri-chang/liao-li/</id>
     <published>2022-05-15T04:13:23.576Z</published>
     <updated>2022-09-03T13:13:54.317Z</updated>
     
@@ -451,8 +451,8 @@
   
   <entry>
     <title>动态创建RabbitMQ</title>
-    <link href="https://dragonlanqaq.gitee.io/2022/04/26/java/rabbitmq/dong-tai-chuang-jian-rabbitmq/"/>
-    <id>https://dragonlanqaq.gitee.io/2022/04/26/java/rabbitmq/dong-tai-chuang-jian-rabbitmq/</id>
+    <link href="https://dragonlanqaq.github.io/2022/04/26/java/rabbitmq/dong-tai-chuang-jian-rabbitmq/"/>
+    <id>https://dragonlanqaq.github.io/2022/04/26/java/rabbitmq/dong-tai-chuang-jian-rabbitmq/</id>
     <published>2022-04-26T04:00:00.000Z</published>
     <updated>2022-09-05T15:59:31.265Z</updated>
     
@@ -468,7 +468,7 @@
     
     
     
-    <category term="RabbitMQ" scheme="https://dragonlanqaq.gitee.io/tags/RabbitMQ/"/>
+    <category term="RabbitMQ" scheme="https://dragonlanqaq.github.io/tags/RabbitMQ/"/>
     
   </entry>
   

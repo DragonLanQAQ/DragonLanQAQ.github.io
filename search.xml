@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>相册使用文档</title>
+      <link href="/2022/09/18/bo-ke-xiang-guan/xiang-ce-shi-yong-wen-dang/"/>
+      <url>/2022/09/18/bo-ke-xiang-guan/xiang-ce-shi-yong-wen-dang/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="相册使用文档"><a href="#相册使用文档" class="headerlink" title="相册使用文档"></a>相册使用文档</h1><p>在博客中source文件夹的_data文件夹下创建galleries.json文件</p><h4 id="格式"><a href="#格式" class="headerlink" title="格式"></a><strong>格式</strong></h4><pre class=" language-json"><code class="language-json"><span class="token punctuation">[</span>  <span class="token punctuation">{</span>    <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"2021"</span><span class="token punctuation">,</span>    <span class="token property">"cover"</span><span class="token operator">:</span> <span class="token string">"https://cdn.staticaly.com/gh/DragonLanQAQ/blog-img-cdn@main/VRChat/VRChat_1920x1080_2021-12-18_21-48-18.589.png"</span><span class="token punctuation">,</span>    <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"2021纪念"</span><span class="token punctuation">,</span>    <span class="token property">"contents"</span><span class="token operator">:</span> <span class="token punctuation">[</span>      <span class="token string">"/medias/video/nianbao.mp4"</span><span class="token punctuation">,</span>      <span class="token string">"https://cdn.staticaly.com/gh/DragonLanQAQ/blog-img-cdn@main/VRChat/xxx.png"</span><span class="token punctuation">,</span>      <span class="token string">"https://cdn.staticaly.com/gh/DragonLanQAQ/blog-img-cdn@main/VRChat/xxx.png"</span><span class="token punctuation">,</span>      <span class="token string">"https://cdn.staticaly.com/gh/DragonLanQAQ/blog-img-cdn@main/VRChat/xxx.png"</span>    <span class="token punctuation">]</span><span class="token punctuation">,</span>    <span class="token property">"tinies"</span><span class="token operator">:</span> <span class="token punctuation">[</span>      <span class="token string">""</span><span class="token punctuation">,</span>      <span class="token string">"https://cdn.staticaly.com/gh/DragonLanQAQ/blog-img-cdn@main/VRChat/xxx-tiny.png"</span><span class="token punctuation">,</span>      <span class="token string">"https://cdn.staticaly.com/gh/DragonLanQAQ/blog-img-cdn@main/VRChat/xxx-tiny.png"</span><span class="token punctuation">,</span>      <span class="token string">"https://cdn.staticaly.com/gh/DragonLanQAQ/blog-img-cdn@main/VRChat/xxx-tiny.png"</span>    <span class="token punctuation">]</span><span class="token punctuation">,</span>    <span class="token property">"descriptions"</span><span class="token operator">:</span> <span class="token punctuation">[</span>      <span class="token string">"不填的内容用空字符串表示，请一一对应"</span><span class="token punctuation">,</span>      <span class="token string">"contents代表点击后跳转的图片连接 2021/8/29"</span><span class="token punctuation">,</span>      <span class="token string">"tinies代表页面上显示的缩略图 2021/8/29"</span><span class="token punctuation">,</span>      <span class="token string">"descriptions代表视频格式文件点击后显示的描述 2021/8/20"</span>    <span class="token punctuation">]</span>  <span class="token punctuation">}</span><span class="token punctuation">,</span>  <span class="token punctuation">{</span>    <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"2022"</span><span class="token punctuation">,</span>    <span class="token property">"cover"</span><span class="token operator">:</span> <span class="token string">"https://cdn.staticaly.com/gh/DragonLanQAQ/blog-img-cdn@main/VRChat/VRChat_1920x1080_2021-12-18_21-48-18.589.png"</span><span class="token punctuation">,</span>    <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"2022纪念"</span><span class="token punctuation">,</span>    <span class="token property">"contents"</span><span class="token operator">:</span> <span class="token punctuation">[</span>      <span class="token string">"https://cdn.staticaly.com/gh/DragonLanQAQ/blog-img-cdn@main/VRChat/xxx.png"</span><span class="token punctuation">,</span>      <span class="token string">"https://cdn.staticaly.com/gh/DragonLanQAQ/blog-img-cdn@main/VRChat/xxx.png"</span><span class="token punctuation">,</span>      <span class="token string">"https://cdn.staticaly.com/gh/DragonLanQAQ/blog-img-cdn@main/VRChat/xxx.png"</span>    <span class="token punctuation">]</span><span class="token punctuation">,</span>    <span class="token property">"tinies"</span><span class="token operator">:</span> <span class="token punctuation">[</span>      <span class="token string">"https://cdn.staticaly.com/gh/DragonLanQAQ/blog-img-cdn@main/VRChat/xxx-tiny.png"</span><span class="token punctuation">,</span>      <span class="token string">"https://cdn.staticaly.com/gh/DragonLanQAQ/blog-img-cdn@main/VRChat/xxx-tiny.png"</span><span class="token punctuation">,</span>      <span class="token string">"https://cdn.staticaly.com/gh/DragonLanQAQ/blog-img-cdn@main/VRChat/xxx-tiny.png"</span><span class="token punctuation">,</span>    <span class="token punctuation">]</span><span class="token punctuation">,</span>    <span class="token property">"descriptions"</span><span class="token operator">:</span> <span class="token punctuation">[</span>      <span class="token string">"1 2021/8/29"</span><span class="token punctuation">,</span>      <span class="token string">"2 2021/8/29"</span><span class="token punctuation">,</span>      <span class="token string">"3 2021/8/20"</span>    <span class="token punctuation">]</span>  <span class="token punctuation">}</span><span class="token punctuation">]</span></code></pre><h4 id="在URL里使用转义"><a href="#在URL里使用转义" class="headerlink" title="在URL里使用转义"></a><strong>在URL里使用转义</strong></h4><table><thead><tr><th>殊字符</th><th>说明</th><th>16进制值</th></tr></thead><tbody><tr><td>+</td><td>URL 中+号表示空格</td><td>%2B</td></tr><tr><td>空格</td><td>URL中的空格可以用+号或者编码</td><td>%20</td></tr><tr><td>(</td><td>左括号</td><td>%28</td></tr><tr><td>)</td><td>右括号</td><td>%29</td></tr><tr><td>/</td><td>分隔目录和子目录</td><td>%2F</td></tr><tr><td>?</td><td>分隔实际的URL和参数</td><td>%3F</td></tr><tr><td>%</td><td>指定特殊字符</td><td>%25</td></tr><tr><td>#</td><td>表示书签</td><td>%23</td></tr><tr><td>&amp;</td><td>URL中指定的参数间的分隔符</td><td>%26</td></tr><tr><td>=</td><td>URL中指定参数的值</td><td>%3D</td></tr></tbody></table>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>我的世界java版基岩版互通教程</title>
       <link href="/2022/09/10/you-xi/minecraft/wo-de-shi-jie-java-ban-ji-yan-ban-hu-tong-jiao-cheng/"/>
       <url>/2022/09/10/you-xi/minecraft/wo-de-shi-jie-java-ban-ji-yan-ban-hu-tong-jiao-cheng/</url>
@@ -55,31 +68,6 @@
     
     
     <entry>
-      <title>月饼</title>
-      <link href="/2022/09/06/sui-bi/yue-bing/"/>
-      <url>/2022/09/06/sui-bi/yue-bing/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="ipage">    <div class="ititle">享受公司福利的一天</div>    <div class="izhengwen">        <p>最近快中秋节了，公司今天发了月饼。六个共四种口味，果然还是红豆馅的好吃，毕竟苏州大多毕竟擅长吃甜食</p>        <p>晚饭吃的是昨天剩下的咖喱，这东西做一次可以吃两餐，冷藏后放锅里热热就行，简单方便，还不用洗多少碗</p>        <p>总算也是把博客随笔功能简单搭建了一下，之后就可以往里面随便写写东西记录一下自己的生活了</p>    </div></div>]]></content>
-      
-      
-      <categories>
-          
-          <category> 随笔 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 随笔 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>斯普拉遁</title>
       <link href="/2022/09/06/sui-bi/pen-she-zhan-shi/"/>
       <url>/2022/09/06/sui-bi/pen-she-zhan-shi/</url>
@@ -103,6 +91,31 @@
             <tag> switch </tag>
             
             <tag> 斯普拉遁 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>月饼</title>
+      <link href="/2022/09/06/sui-bi/yue-bing/"/>
+      <url>/2022/09/06/sui-bi/yue-bing/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="ipage">    <div class="ititle">享受公司福利的一天</div>    <div class="izhengwen">        <p>最近快中秋节了，公司今天发了月饼。六个共四种口味，果然还是红豆馅的好吃，毕竟苏州大多毕竟擅长吃甜食</p>        <p>晚饭吃的是昨天剩下的咖喱，这东西做一次可以吃两餐，冷藏后放锅里热热就行，简单方便，还不用洗多少碗</p>        <p>总算也是把博客随笔功能简单搭建了一下，之后就可以往里面随便写写东西记录一下自己的生活了</p>    </div></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 随笔 </tag>
             
         </tags>
       
@@ -701,6 +714,19 @@
     
     
     <entry>
+      <title>我的第一篇博客文章</title>
+      <link href="/2021/10/18/bo-ke-xiang-guan/wo-de-di-yi-pian-bo-ke-wen-zhang/"/>
+      <url>/2021/10/18/bo-ke-xiang-guan/wo-de-di-yi-pian-bo-ke-wen-zhang/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>内容测试</p><hr><h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>内容</p><hr><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="http://www.codesheep.cn/" target="_blank" rel="noopener">www.codesheep.cn</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>博客搭建报错问题总结</title>
       <link href="/2021/10/18/bo-ke-xiang-guan/bo-ke-da-jian-bao-cuo-zong-jie/"/>
       <url>/2021/10/18/bo-ke-xiang-guan/bo-ke-da-jian-bao-cuo-zong-jie/</url>
@@ -714,19 +740,6 @@
             <tag> blog </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>我的第一篇博客文章</title>
-      <link href="/2021/10/18/bo-ke-xiang-guan/wo-de-di-yi-pian-bo-ke-wen-zhang/"/>
-      <url>/2021/10/18/bo-ke-xiang-guan/wo-de-di-yi-pian-bo-ke-wen-zhang/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>内容测试</p><hr><h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>内容</p><hr><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="http://www.codesheep.cn/" target="_blank" rel="noopener">www.codesheep.cn</a></p>]]></content>
-      
-      
       
     </entry>
     

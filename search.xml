@@ -4,6 +4,57 @@
   
     
     <entry>
+      <title>Blender操作与基础知识</title>
+      <link href="/2022/10/02/blender/blender-cao-zuo/"/>
+      <url>/2022/10/02/blender/blender-cao-zuo/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Blender操作与基础知识"><a href="#Blender操作与基础知识" class="headerlink" title="Blender操作与基础知识"></a>Blender操作与基础知识</h1><h2 id="一、3D视图操作"><a href="#一、3D视图操作" class="headerlink" title="一、3D视图操作"></a>一、3D视图操作</h2><h4 id="3D视图的旋转、缩放和平移"><a href="#3D视图的旋转、缩放和平移" class="headerlink" title="3D视图的旋转、缩放和平移"></a>3D视图的旋转、缩放和平移</h4><div>    <p>观察3D视图：<img src="https://cdn.staticaly.com/gh/DragonLanQAQ/blog-img-cdn@main/img/Blender视图操作.png" style="float:right;"></img></p></div><ul><li>导航器</li><li>XY工作平面，Z轴向上</li><li>游标，默认位于世界的中心</li></ul><p>快捷键：</p><ul><li>旋转：按下鼠标中键拖动</li><li>缩放：鼠标滚轮</li><li>平移：Shift + 鼠标中键</li></ul><p>为了便于理解，把X轴称为<code>东西</code>，Y轴称为<code>南北</code></p><h2 id="二、四视图"><a href="#二、四视图" class="headerlink" title="二、四视图"></a>二、四视图</h2><h4 id="四视图，即4种常用的查看视角"><a href="#四视图，即4种常用的查看视角" class="headerlink" title="四视图，即4种常用的查看视角"></a>四视图，即4种常用的查看视角</h4><ul><li>透视图</li><li>顶视图，数字7键</li><li>正视图，数字1键</li><li>右视图，数字3键</li><li>四格视图，CTRL + ALT + Q</li></ul><p>其中，旋转世界，既可以返回透视图</p><p>无小键盘可以用<code>~</code>切换视图</p><p>或者在偏好设置里选择输入→键盘→模拟数字键盘，启用字母区的数字键</p><p>ScreenCast Keys插件</p><h2 id="三、缩放和旋转"><a href="#三、缩放和旋转" class="headerlink" title="三、缩放和旋转"></a>三、缩放和旋转</h2><p>几个快捷键：</p><ul><li>ALT + G 坐标归零 (G代表 Grab / Move)</li><li>ALT + R 旋转归零 (R代表 Rotate)</li><li>ALT + S 缩放归零 (S代表 Scale)</li></ul><p>注意，先选中物体，再按ALT + R</p><div class="img"    <p>3D游戏世界坐标系(左手系)</p>    <img src="https://cdn.staticaly.com/gh/DragonLanQAQ/blog-img-cdn@main/img/3D游戏世界坐标系(左手系).png"/></div><h2 id="四、视野中心"><a href="#四、视野中心" class="headerlink" title="四、视野中心"></a>四、视野中心</h2><h4 id="框显所选"><a href="#框显所选" class="headerlink" title="框显所选"></a>框显所选</h4><ol><li>选中一个物体</li><li>按 F 键，置于视图中心</li></ol><p>此时旋转视图，似是绕着物体旋转</p><p><strong>出生点</strong>：添加一个新物体，物体位于视图中心</p><p>注意，出生点不是在(0,0,0)，而是在当前视图中心</p><h2 id="五、透视与正交"><a href="#五、透视与正交" class="headerlink" title="五、透视与正交"></a>五、透视与正交</h2><p>透视视图 <strong>Perspective</strong> ，近大远小</p><p>正交视图 <strong>Orthographic</strong> ，又称等距视图 <strong>Isometric</strong></p><p>透视图下，物体 ‘近大远小’ 。正交视图下，物体的显示与距离无关。</p><h4 id="正交视图，常用于物体的布局、对齐操作"><a href="#正交视图，常用于物体的布局、对齐操作" class="headerlink" title="正交视图，常用于物体的布局、对齐操作"></a>正交视图，常用于物体的布局、对齐操作</h4><ul><li>正交顶视图</li><li>正交右视图</li><li>正交前视图</li></ul><h4 id="透视，广角设定"><a href="#透视，广角设定" class="headerlink" title="透视，广角设定"></a>透视，广角设定</h4><p>摄像机的广角 Field</p><p>默认为60度</p><p>广角越大，透视畸变越厉害。可以设置为30~40度。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Unity操作与基础知识</title>
+      <link href="/2022/10/02/unity/unity-cao-zuo/"/>
+      <url>/2022/10/02/unity/unity-cao-zuo/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Unity操作与基础知识"><a href="#Unity操作与基础知识" class="headerlink" title="Unity操作与基础知识"></a>Unity操作与基础知识</h1><h2 id="一、3D视图"><a href="#一、3D视图" class="headerlink" title="一、3D视图"></a>一、3D视图</h2><ol><li>旋转视图，ALT + LMB ( Left Mouse Button )</li><li>缩放视图<ul><li>鼠标滚轮</li><li>ALT +RMB ( Right Mouse Button )</li></ul></li><li>平移视图，MMB ( Middle Mouse Button )</li></ol><h2 id="二、导航器"><a href="#二、导航器" class="headerlink" title="二、导航器"></a>二、导航器</h2><ul><li><p>按 Shift，点击中间的小方块，恢复方向</p></li><li><p>点 Y 轴，顶视图</p></li><li><p>点 X 轴，右视图</p></li><li><p>点 Z 轴，前视图</p></li></ul><h2 id="三、坐标系"><a href="#三、坐标系" class="headerlink" title="三、坐标系"></a>三、坐标系</h2><div class="img">    <p>3D游戏世界坐标系(左手系)</p>    <img src="https://cdn.staticaly.com/gh/DragonLanQAQ/blog-img-cdn@main/img/3D游戏世界坐标系(左手系).png"/></div><h2 id="四、视野中心"><a href="#四、视野中心" class="headerlink" title="四、视野中心"></a>四、视野中心</h2><h4 id="框显所选"><a href="#框显所选" class="headerlink" title="框显所选"></a>框显所选</h4><ol><li>选中一个物体</li><li>按 F 键，置于视图中心</li></ol><p>此时旋转视图，似是绕着物体旋转</p><p><strong>出生点</strong>：添加一个新物体，物体位于视图中心</p><p>注意，出生点不是在(0,0,0)，而是在当前视图中心</p><h2 id="五、透视与正交"><a href="#五、透视与正交" class="headerlink" title="五、透视与正交"></a>五、透视与正交</h2><p>透视视图 <strong>Perspective</strong> ，近大远小</p><p>正交视图 <strong>Orthographic</strong> ，又称等距视图 <strong>Isometric</strong></p><p>透视图下，物体 ‘近大远小’ 。正交视图下，物体的显示与距离无关。</p><h4 id="正交视图，常用于物体的布局、对齐操作"><a href="#正交视图，常用于物体的布局、对齐操作" class="headerlink" title="正交视图，常用于物体的布局、对齐操作"></a>正交视图，常用于物体的布局、对齐操作</h4><ul><li>正交顶视图</li><li>正交右视图</li><li>正交前视图</li></ul><h4 id="透视，广角设定"><a href="#透视，广角设定" class="headerlink" title="透视，广角设定"></a>透视，广角设定</h4><p>摄像机的广角 Field</p><p>默认为60度</p><p>广角越大，透视畸变越厉害。可以设置为30~40度。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>游戏之路（其一）</title>
+      <link href="/2022/10/02/sui-bi/you-xi-zhi-lu-qi-yi/"/>
+      <url>/2022/10/02/sui-bi/you-xi-zhi-lu-qi-yi/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="ipage">    <div class="ititle">游戏之路（其一）</div>    <div class="izhengwen">        <p>考虑到最近每天回家之后都无所事事的打游戏，这样子下去怕是一直都无法去实现做游戏的梦想。从现在开始自学unity或Blender，顺便把c#也一起学了，多懂一门编程的技术也不错。</p>    </div></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>相册使用文档</title>
       <link href="/2022/09/18/bo-ke-xiang-guan/xiang-ce-shi-yong-wen-dang/"/>
       <url>/2022/09/18/bo-ke-xiang-guan/xiang-ce-shi-yong-wen-dang/</url>

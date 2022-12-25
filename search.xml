@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>批量修改文件名称</title>
+      <link href="/2022/10/04/bo-ke-xiang-guan/pi-liang-xiu-gai-wen-jian-ming-cheng/"/>
+      <url>/2022/10/04/bo-ke-xiang-guan/pi-liang-xiu-gai-wen-jian-ming-cheng/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="一、批量修改图片的名称"><a href="#一、批量修改图片的名称" class="headerlink" title="一、批量修改图片的名称"></a>一、批量修改图片的名称</h1><pre class=" language-shell"><code class="language-shell"># cmdren *.*.png *-tiny.*.png</code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Blender操作与基础知识</title>
       <link href="/2022/10/02/blender/blender-cao-zuo/"/>
       <url>/2022/10/02/blender/blender-cao-zuo/</url>
@@ -380,7 +393,7 @@
       <link href="/2022/05/15/ri-chang/liao-li/"/>
       <url>/2022/05/15/ri-chang/liao-li/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="料理"><a href="#料理" class="headerlink" title="料理"></a>料理</h1><h2 id="红烧鸡翅尖"><a href="#红烧鸡翅尖" class="headerlink" title="红烧鸡翅尖"></a>红烧鸡翅尖</h2><ol><li>鸡翅尖冷水冲洗干净</li><li>凉水下锅，加入姜片和料酒去腥</li><li>开大火烧开后，漏勺捞出冲洗干净</li><li>锅中5勺油，放入鸡翅，中小火闭盖煎2~3分钟</li><li>半勺老抽，半勺盐，半勺糖，加入蒜蓉辣酱翻炒均匀</li><li>加入清水刚好没过翅尖，闭盖中火炖20分钟</li><li>转大火收汁(可加入葱花)</li><li>关火出锅</li></ol><h2 id="炖土豆块"><a href="#炖土豆块" class="headerlink" title="炖土豆块"></a>炖土豆块</h2><ol><li>土豆去皮切小块放入锅中</li><li>火腿切丁放入锅中</li><li>辣椒切块放入锅中</li><li>锅中加入一勺耗油、三勺生抽、半勺糖</li><li>闭盖中小火焖煮10分钟</li><li>开盖转大火收汁</li><li>可以撒葱</li></ol><h2 id="绿豆沙"><a href="#绿豆沙" class="headerlink" title="绿豆沙"></a>绿豆沙</h2><p>绿豆冷水冲洗干净</p><p>滤水，倒入开水，盖上盖子放置20分钟</p><p>放入冰箱冷冻6小时</p><p>冷冻完放入电饭煲</p><p>200g绿豆放矿泉水1.2L</p><p>煮粥模式煮2小时</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="料理"><a href="#料理" class="headerlink" title="料理"></a>料理</h1><h2 id="红烧鸡翅尖"><a href="#红烧鸡翅尖" class="headerlink" title="红烧鸡翅尖"></a>红烧鸡翅尖</h2><ol><li>鸡翅尖冷水冲洗干净</li><li>凉水下锅，加入姜片和料酒去腥</li><li>开大火烧开后，漏勺捞出冲洗干净</li><li>锅中5勺油，放入鸡翅，中小火闭盖煎2~3分钟</li><li>半勺老抽，半勺盐，半勺糖，加入蒜蓉辣酱翻炒均匀</li><li>加入清水刚好没过翅尖，闭盖中火炖20分钟</li><li>转大火收汁(可加入葱花)</li><li>关火出锅</li></ol><h2 id="炖土豆块"><a href="#炖土豆块" class="headerlink" title="炖土豆块"></a>炖土豆块</h2><ol><li>土豆去皮切小块放入锅中</li><li>火腿切丁放入锅中</li><li>辣椒切块放入锅中</li><li>锅中加入一勺耗油、三勺生抽、半勺糖</li><li>闭盖中小火焖煮10分钟</li><li>开盖转大火收汁</li><li>可以撒葱</li></ol><h2 id="绿豆沙"><a href="#绿豆沙" class="headerlink" title="绿豆沙"></a>绿豆沙</h2><p>绿豆冷水冲洗干净</p><p>滤水，倒入开水，盖上盖子放置20分钟</p><p>放入冰箱冷冻6小时</p><p>冷冻完放入电饭煲</p><p>200g绿豆放矿泉水1.2L</p><p>煮粥模式煮2小时</p><h2 id="豌豆炒肉"><a href="#豌豆炒肉" class="headerlink" title="豌豆炒肉"></a>豌豆炒肉</h2><p>6个小米辣切碎</p><p>锅中倒水，水开后倒入豌豆焯水，焯水时加一勺盐</p><p>豌豆断生即可倒出滤水</p><p>起锅烧油，油热下入肉沫</p><p>一勺耗油，一勺生抽，半勺老抽上色</p><p>倒入豌豆翻炒或加水盖盖焖5分钟</p><p>加入水淀粉勾芡</p><p>大火收汁 </p>]]></content>
       
       
       
